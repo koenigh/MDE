@@ -1,0 +1,2 @@
+protocolFileDirectory = C:/Temp
+javaIDEProjectDirectory = C:/D/JavaWorkspace/MDEGen

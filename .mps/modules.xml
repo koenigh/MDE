@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MPSProject">
+    <projectModules>
+      <modulePath path="$PROJECT_DIR$/languages/MetaModel/MetaModel.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/SampleSolution/SampleSolution.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/external/external.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/pluginSolution/pluginSolution.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/../Project/languages/AttributedGraphs/AttributedGraphs.mpl" folder="" />
+    </projectModules>
+  </component>
+</project>

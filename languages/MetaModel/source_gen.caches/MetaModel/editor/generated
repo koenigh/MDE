@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<product version="3" modelHash="12coqxysovcu9nat07q1tg1y5c8jvab">
+  <files names="Association_Editor.java:Association_EditorBuilder_a.java:AttributeConnector_Editor.java:AttributeConnector_EditorBuilder_a.java:Bidirectional_Editor.java:Bidirectional_EditorBuilder_a.java:Class_Editor.java:Class_EditorBuilder_a.java:ConstrainedTargetConnector_Editor.java:ConstrainedTargetConnector_EditorBuilder_a.java:EditorAspectDescriptorImpl.java:Exception_Editor.java:Exception_EditorBuilder_a.java:Generalisation_Editor.java:Generalisation_EditorBuilder_a.java:Operation_Editor.java:Operation_EditorBuilder_a.java:OwnerConnector_Editor.java:OwnerConnector_EditorBuilder_a.java:Parameter_Editor.java:Parameter_EditorBuilder_a.java:Service_Editor.java:Service_EditorBuilder_a.java:TypeAdapter_Editor.java:TypeAdapter_EditorBuilder_a.java:TypeAdapter_SubstituteMenu.java:Unidirectional_Editor.java:Unidirectional_EditorBuilder_a.java" />
+</product>
+
