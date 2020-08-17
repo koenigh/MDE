@@ -18,44 +18,44 @@
   </root>
   <root nodeRef="r:489510dc-ea52-4795-b022-2cffd05211ac(MetaModel.constraints)/1316074037363317540">
     <file name="PrimitiveType_Constraints.java">
-      <node id="1316074037363317540" at="19,38,20,37" concept="10" />
-      <node id="1316074037363317540" at="27,127,28,128" concept="4" />
-      <node id="1316074037363317540" at="28,128,29,0" concept="7" />
-      <node id="1316074037363317540" at="30,55,31,71" concept="1" />
-      <node id="1316074037363317540" at="32,9,33,0" concept="7" />
-      <node id="1316074037363317540" at="33,0,34,22" concept="5" />
-      <node id="1316074037363317794" at="38,128,39,17" concept="5" />
-      <node id="1316074037363339966" at="39,17,40,181" concept="6" />
-      <node id="1316074037363317540" at="42,0,43,0" concept="8" trace="canBeChildBreakingPoint" />
-      <node id="1316074037363317540" at="45,0,46,0" concept="8" trace="PrimitiveType$p7" />
-      <node id="1316074037363317540" at="19,0,22,0" concept="0" trace="PrimitiveType_Constraints#()V" />
-      <node id="1316074037363317540" at="29,0,32,9" concept="2" />
-      <node id="1316074037363317540" at="38,0,42,0" concept="9" trace="staticCanBeAChild#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Lorg/jetbrains/mps/openapi/language/SContainmentLink;)Z" />
-      <node id="1316074037363317540" at="26,0,36,0" concept="3" trace="invoke#(Ljetbrains/mps/smodel/runtime/ConstraintContext_CanBeChild;Ljetbrains/mps/smodel/runtime/CheckingNodeContext;)Ljava/lang/Boolean;" />
-      <node id="1316074037363317540" at="24,103,36,6" concept="5" />
-      <node id="1316074037363317540" at="23,0,38,0" concept="3" trace="calculateCanBeChildConstraint#()Ljetbrains/mps/smodel/runtime/ConstraintFunction;" />
-      <scope id="1316074037363317540" at="19,38,20,37" />
-      <scope id="1316074037363317540" at="30,55,31,71" />
-      <scope id="1316074037363317542" at="38,128,40,181" />
-      <scope id="1316074037363317540" at="19,0,22,0" />
-      <scope id="1316074037363317540" at="38,0,42,0">
+      <node id="1316074037363317540" at="20,38,21,37" concept="10" />
+      <node id="1316074037363317540" at="28,127,29,128" concept="4" />
+      <node id="1316074037363317540" at="29,128,30,0" concept="7" />
+      <node id="1316074037363317540" at="31,55,32,71" concept="1" />
+      <node id="1316074037363317540" at="33,9,34,0" concept="7" />
+      <node id="1316074037363317540" at="34,0,35,22" concept="5" />
+      <node id="1316074037363317794" at="39,128,40,120" concept="5" />
+      <node id="1316074037363339966" at="40,120,41,181" concept="6" />
+      <node id="1316074037363317540" at="43,0,44,0" concept="8" trace="canBeChildBreakingPoint" />
+      <node id="1316074037363317540" at="46,0,47,0" concept="8" trace="PrimitiveType$p7" />
+      <node id="1316074037363317540" at="20,0,23,0" concept="0" trace="PrimitiveType_Constraints#()V" />
+      <node id="1316074037363317540" at="30,0,33,9" concept="2" />
+      <node id="1316074037363317540" at="39,0,43,0" concept="9" trace="staticCanBeAChild#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Lorg/jetbrains/mps/openapi/language/SContainmentLink;)Z" />
+      <node id="1316074037363317540" at="27,0,37,0" concept="3" trace="invoke#(Ljetbrains/mps/smodel/runtime/ConstraintContext_CanBeChild;Ljetbrains/mps/smodel/runtime/CheckingNodeContext;)Ljava/lang/Boolean;" />
+      <node id="1316074037363317540" at="25,103,37,6" concept="5" />
+      <node id="1316074037363317540" at="24,0,39,0" concept="3" trace="calculateCanBeChildConstraint#()Ljetbrains/mps/smodel/runtime/ConstraintFunction;" />
+      <scope id="1316074037363317540" at="20,38,21,37" />
+      <scope id="1316074037363317540" at="31,55,32,71" />
+      <scope id="1316074037363317542" at="39,128,41,181" />
+      <scope id="1316074037363317540" at="20,0,23,0" />
+      <scope id="1316074037363317540" at="39,0,43,0">
         <var name="childConcept" id="1316074037363317540" />
         <var name="link" id="1316074037363317540" />
         <var name="node" id="1316074037363317540" />
         <var name="parentNode" id="1316074037363317540" />
       </scope>
-      <scope id="1316074037363317540" at="27,127,34,22">
+      <scope id="1316074037363317540" at="28,127,35,22">
         <var name="result" id="1316074037363317540" />
       </scope>
-      <scope id="1316074037363317540" at="26,0,36,0">
+      <scope id="1316074037363317540" at="27,0,37,0">
         <var name="checkingNodeContext" id="1316074037363317540" />
         <var name="context" id="1316074037363317540" />
       </scope>
-      <scope id="1316074037363317540" at="24,103,36,6" />
-      <scope id="1316074037363317540" at="23,0,38,0" />
-      <unit id="1316074037363317540" at="44,0,47,0" name="MetaModel.constraints.PrimitiveType_Constraints$CONCEPTS" />
-      <unit id="1316074037363317540" at="25,15,36,5" name="MetaModel.constraints.PrimitiveType_Constraints$1" />
-      <unit id="1316074037363317540" at="18,0,48,0" name="MetaModel.constraints.PrimitiveType_Constraints" />
+      <scope id="1316074037363317540" at="25,103,37,6" />
+      <scope id="1316074037363317540" at="24,0,39,0" />
+      <unit id="1316074037363317540" at="45,0,48,0" name="MetaModel.constraints.PrimitiveType_Constraints$CONCEPTS" />
+      <unit id="1316074037363317540" at="26,15,37,5" name="MetaModel.constraints.PrimitiveType_Constraints$1" />
+      <unit id="1316074037363317540" at="19,0,49,0" name="MetaModel.constraints.PrimitiveType_Constraints" />
     </file>
   </root>
   <root nodeRef="r:489510dc-ea52-4795-b022-2cffd05211ac(MetaModel.constraints)/1316074037364892357">

@@ -23,15 +23,20 @@
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" />
     <import index="scpa" ref="r:fbcd0e44-58df-4be0-8f6c-750fc6a4ebe5(MetaModel.structure)" implicit="true" />
     <import index="tpcu" ref="r:00000000-0000-4000-0000-011c89590282(jetbrains.mps.lang.core.behavior)" implicit="true" />
+    <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
+      <concept id="1202948039474" name="jetbrains.mps.baseLanguage.structure.InstanceMethodCallOperation" flags="nn" index="liA8E" />
       <concept id="1197027756228" name="jetbrains.mps.baseLanguage.structure.DotExpression" flags="nn" index="2OqwBi">
         <child id="1197027771414" name="operand" index="2Oq$k0" />
         <child id="1197027833540" name="operation" index="2OqNvi" />
       </concept>
       <concept id="1137021947720" name="jetbrains.mps.baseLanguage.structure.ConceptFunction" flags="in" index="2VMwT0">
         <child id="1137022507850" name="body" index="2VODD2" />
+      </concept>
+      <concept id="1070475926800" name="jetbrains.mps.baseLanguage.structure.StringLiteral" flags="nn" index="Xl_RD">
+        <property id="1070475926801" name="value" index="Xl_RC" />
       </concept>
       <concept id="1068580123155" name="jetbrains.mps.baseLanguage.structure.ExpressionStatement" flags="nn" index="3clFbF">
         <child id="1068580123156" name="expression" index="3clFbG" />
@@ -88,7 +93,20 @@
     <node concept="9S07l" id="193C_OR9TG_" role="9Vyp8">
       <node concept="3clFbS" id="193C_OR9TGA" role="2VODD2">
         <node concept="3clFbF" id="193C_OR9TKy" role="3cqZAp">
-          <node concept="3clFbT" id="193C_OR9YB6" role="3clFbG" />
+          <node concept="2OqwBi" id="2GpcgyVzlif" role="3clFbG">
+            <node concept="2OqwBi" id="2GpcgyVzkM$" role="2Oq$k0">
+              <node concept="nLn13" id="2GpcgyVzkfv" role="2Oq$k0" />
+              <node concept="2qgKlT" id="2GpcgyVzkSh" role="2OqNvi">
+                <ref role="37wK5l" to="tpcu:22G2W3WJ92t" resolve="getDetailedPresentation" />
+              </node>
+            </node>
+            <node concept="liA8E" id="2GpcgyVzlx5" role="2OqNvi">
+              <ref role="37wK5l" to="wyt6:~String.equals(java.lang.Object)" resolve="equals" />
+              <node concept="Xl_RD" id="2GpcgyVzlyk" role="37wK5m">
+                <property role="Xl_RC" value="baseTypes" />
+              </node>
+            </node>
+          </node>
         </node>
         <node concept="3SKdUt" id="193C_OR9ZaY" role="3cqZAp">
           <node concept="1PaTwC" id="193C_OR9ZaZ" role="3ndbpf">

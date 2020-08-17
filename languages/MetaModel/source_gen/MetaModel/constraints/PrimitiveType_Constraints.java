@@ -11,6 +11,7 @@ import jetbrains.mps.smodel.runtime.CheckingNodeContext;
 import org.jetbrains.mps.openapi.model.SNode;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
+import jetbrains.mps.lang.core.behavior.BaseConcept__BehaviorDescriptor;
 import jetbrains.mps.smodel.SNodePointer;
 import org.jetbrains.mps.openapi.language.SConcept;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
@@ -36,7 +37,7 @@ public class PrimitiveType_Constraints extends BaseConstraintsDescriptor {
     };
   }
   private static boolean staticCanBeAChild(SNode node, SNode parentNode, SAbstractConcept childConcept, SContainmentLink link) {
-    return false;
+    return BaseConcept__BehaviorDescriptor.getDetailedPresentation_id22G2W3WJ92t.invoke(parentNode).equals("baseTypes");
     // We prevent a Primitive Type to be a child. Since the only situation for a primitive type to be a child is IN a service, this prevents a modeler to create new primitive types 
   }
   private static final SNodePointer canBeChildBreakingPoint = new SNodePointer("r:489510dc-ea52-4795-b022-2cffd05211ac(MetaModel.constraints)", "1316074037363317541");

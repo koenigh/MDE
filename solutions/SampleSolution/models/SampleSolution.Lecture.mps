@@ -156,7 +156,7 @@
       </node>
       <node concept="3_Gd5r" id="5iYaeDUEYPK" role="3_Gd4E">
         <property role="3_Gd5q" value="addTransition" />
-        <property role="3_Gd5o" value=" " />
+        <property role="3_Gd5o" value="addTransition " />
         <property role="3_Gd5t" value="Fuegt eine Transition von &lt;from&gt; nach &lt;to&gt; mit event &lt;e&gt; hinzu" />
         <node concept="3_Gf45" id="5iYaeDUEYPR" role="3_Gf4o">
           <property role="TrG5h" value="from" />
