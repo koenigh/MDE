@@ -4,9 +4,6 @@
     <modelRoot contentPath="${module}" type="default">
       <sourceRoot location="." />
     </modelRoot>
-    <modelRoot contentPath="C:/Users/König/MPSProjects/MDE/solutions/external/libs" type="java_classes">
-      <sourceRoot location="mde.jar" />
-    </modelRoot>
   </models>
   <stubModelEntries>
     <stubModelEntry path="C:/Users/König/MPSProjects/MDE/solutions/external/libs/xmlpull-1.1.3.1.jar" />

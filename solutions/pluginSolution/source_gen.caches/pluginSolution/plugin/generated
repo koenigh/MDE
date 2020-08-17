@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="5ghfnoquxxp664fe3r3vzht1y4lom46">
+<product version="3" modelHash="-brn4egxsoz74p010ycggjuyicpak2sc">
   <files names="AddOns_ActionGroup.java:GenerateModel_Action.java:GenerateService_Action.java:MacOSX105_KeymapChanges.java:MacOSX_KeymapChanges.java:ModelGenerator.java:PluginSolution_ApplicationPlugin.java:ReInitializeService_Action.java:ServiceGenerator.java:baseTypes.tst:keyMapReinitialise_KeymapChanges.java:keyMapRunGeneration_KeymapChanges.java" />
 </product>
 

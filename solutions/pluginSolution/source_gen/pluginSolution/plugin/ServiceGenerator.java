@@ -70,7 +70,7 @@ public class ServiceGenerator {
   public JService executeService() {
     this.jService = this.processNode(new ArrayList<JService>());
     this.generateJavaCode();
-    this.informationMessage("Carried Out Code Generation For " + this.jService.getName() + ". Watch Out For Syntax Errors in Generated Code!!!");
+    this.informationMessage("Carried Out Code Generation for " + this.jService.getName() + ". Watch Out For Syntax Errors in Generated Code!!!");
     try {
       this.writeXML();
     } catch (Exception e) {
