@@ -778,11 +778,11 @@
               <ref role="37wK5l" node="63gs_YufjVn" resolve="informationMessage" />
               <node concept="3cpWs3" id="63gs_Yup7Ro" role="37wK5m">
                 <node concept="Xl_RD" id="63gs_Yup7Rp" role="3uHU7w">
-                  <property role="Xl_RC" value=". Watch Out For Syntax Errors in Generated Code!!!" />
+                  <property role="Xl_RC" value=". Watch out for Syntax Errors in Generated Code!!!" />
                 </node>
                 <node concept="3cpWs3" id="63gs_Yup7Rq" role="3uHU7B">
                   <node concept="Xl_RD" id="63gs_Yup7Rr" role="3uHU7B">
-                    <property role="Xl_RC" value="Carried Out Code Generation for " />
+                    <property role="Xl_RC" value="Carried out Code Generation for " />
                   </node>
                   <node concept="2OqwBi" id="1HcC7cX02XQ" role="3uHU7w">
                     <node concept="2OqwBi" id="1HcC7cX01Xr" role="2Oq$k0">
@@ -1304,7 +1304,7 @@
               <ref role="1Pybhc" to="dxuu:~JOptionPane" resolve="JOptionPane" />
               <node concept="10Nm6u" id="2FXf3jLXwGh" role="37wK5m" />
               <node concept="Xl_RD" id="2FXf3jLXvdl" role="37wK5m">
-                <property role="Xl_RC" value="ATTENTION: This will overwrite Your Own Code in All Generated Classes. Do you want to proceed?" />
+                <property role="Xl_RC" value="ATTENTION: This will overwrite your own Code in All Generated Classes. Do you want to proceed?" />
               </node>
             </node>
           </node>

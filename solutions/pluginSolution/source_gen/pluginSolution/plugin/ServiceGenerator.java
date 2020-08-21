@@ -70,7 +70,7 @@ public class ServiceGenerator {
   public JService executeService() {
     this.jService = this.processNode(new ArrayList<JService>());
     this.generateJavaCode();
-    this.informationMessage("Carried Out Code Generation for " + this.jService.getName() + ". Watch Out For Syntax Errors in Generated Code!!!");
+    this.informationMessage("Carried out Code Generation for " + this.jService.getName() + ". Watch out for Syntax Errors in Generated Code!!!");
     try {
       this.writeXML();
     } catch (Exception e) {
@@ -110,7 +110,7 @@ public class ServiceGenerator {
     }
   }
   public JService reInitializeService() {
-    int answer = JOptionPane.showConfirmDialog(null, "ATTENTION: This will overwrite Your Own Code in All Generated Classes. Do you want to proceed?");
+    int answer = JOptionPane.showConfirmDialog(null, "ATTENTION: This will overwrite your own Code in All Generated Classes. Do you want to proceed?");
     if (answer != JOptionPane.YES_OPTION) {
       return null;
     }
