@@ -158,7 +158,7 @@ public class ServiceGenerator {
       exceptionOccured = true;
       this.error("Exception in Phase 2: " + currentException.getMessage());
     }
-    this.informationMessage("--> Finished Transformation Phase 2 (assigning all unassigned references)" + ((exceptionOccured ? " with errors." : " with no errors.")));
+    this.informationMessage("--> Finished Transformation Phase 2 (assigning all unassigned references)" + ((exceptionOccured ? " with Errors." : " with no Errors.")));
   }
 
   private Object createJavaNode(SNode currentNode) throws Exception {

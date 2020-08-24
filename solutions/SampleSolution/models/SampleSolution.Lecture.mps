@@ -171,6 +171,14 @@
           </node>
         </node>
       </node>
+      <node concept="3_Gd5r" id="57R6S9Cq$F_" role="3_Gd4E">
+        <property role="3_Gd5q" value="isDeterministic" />
+        <property role="3_Gd5o" value="isDeterministic" />
+        <property role="3_Gd5t" value="Liefert true genau dann, wenn dieser Automat deterministisch ist" />
+        <node concept="BxOjD" id="57R6S9Cq$FI" role="BBx3f">
+          <ref role="BxOjI" node="5H4ykBYMXkd" resolve="Boolean" />
+        </node>
+      </node>
     </node>
     <node concept="3_FBDc" id="6KWrYG_TzV4" role="3_Gd4Z">
       <property role="TrG5h" value="SM_StartState" />
@@ -248,32 +256,32 @@
         <property role="2zC27X" value="1axOPyL0vap/TotalMap" />
         <ref role="3_FBDr" node="5H4ykBYMXjQ" resolve="String" />
       </node>
-      <node concept="3_Gd5r" id="5Q6229Kztee" role="3_Gd4E">
+      <node concept="3_Gd5r" id="5Q6229KA4zr" role="3_Gd4E">
         <property role="3_Gd5q" value="contains" />
         <property role="3_Gd5o" value="contains" />
-        <property role="3_Gd5t" value="Liefert true genau dann wenn e in this reflexiv oder transitiv enthalten ist" />
+        <property role="3_Gd5t" value="Prueft, ob e direkt oder indirekt in this enthalten oder ob e = this ist" />
         <property role="3e9aca" value="true" />
-        <node concept="3_Gf45" id="5Q6229Kzteg" role="3_Gf4o">
+        <node concept="3_Gf45" id="5Q6229KA4zt" role="3_Gf4o">
           <property role="TrG5h" value="e" />
-          <node concept="BxOjD" id="5Q6229Kztek" role="BBx2O">
+          <node concept="BxOjD" id="5Q6229KA4zx" role="BBx2O">
             <ref role="BxOjI" node="5Q6229Kztdk" resolve="Element" />
           </node>
         </node>
-        <node concept="BxOjD" id="5Q6229Kzten" role="BBx3f">
+        <node concept="BxOjD" id="5Q6229KA4z$" role="BBx3f">
           <ref role="BxOjI" node="5H4ykBYMXkd" resolve="Boolean" />
         </node>
       </node>
     </node>
     <node concept="3_Gd56" id="5Q6229Kztdu" role="3_Gd4Z">
       <property role="TrG5h" value="Directory" />
-      <node concept="3_Gd5r" id="5Q6229Kztep" role="3_Gd4E">
+      <node concept="3_Gd5r" id="5Q6229KA4zi" role="3_Gd4E">
         <property role="3_Gd5q" value="addElement" />
         <property role="3_Gd5o" value="addElement" />
-        <property role="3_Gd5t" value="Fuegt e hinzu, wenn dadurch kein Zyklus entsteht" />
-        <ref role="3NuQEv" node="5Q6229Kztec" resolve="CycleException" />
-        <node concept="3_Gf45" id="5Q6229Kzter" role="3_Gf4o">
+        <property role="3_Gd5t" value="Fuegt e zu this hinzu, wenn e nicht this enthält und e ungleich this ist. Im anderen Fall wird CycleException geworfen" />
+        <ref role="3NuQEv" node="5Q6229KA4zg" resolve="CycleException" />
+        <node concept="3_Gf45" id="5Q6229KA4zk" role="3_Gf4o">
           <property role="TrG5h" value="e" />
-          <node concept="BxOjD" id="5Q6229Kztev" role="BBx2O">
+          <node concept="BxOjD" id="5Q6229KA4zo" role="BBx2O">
             <ref role="BxOjI" node="5Q6229Kztdk" resolve="Element" />
           </node>
         </node>
@@ -293,15 +301,15 @@
         <ref role="3_FBDr" node="5Q6229Kztdk" resolve="Element" />
       </node>
     </node>
-    <node concept="3_F_VF" id="5Q6229Kzte7" role="3_F_jM">
-      <ref role="3_F_VE" node="5Q6229Kztdk" resolve="Element" />
-      <ref role="3_F_VC" node="5Q6229Kztdu" resolve="Directory" />
-    </node>
-    <node concept="3_F_VF" id="5Q6229Kzte9" role="3_F_jM">
+    <node concept="3_F_VF" id="5Q6229KA4zb" role="3_F_jM">
       <ref role="3_F_VE" node="5Q6229Kztdk" resolve="Element" />
       <ref role="3_F_VC" node="5Q6229KztdC" resolve="File" />
     </node>
-    <node concept="3_Gd4C" id="5Q6229Kztec" role="3_G82M">
+    <node concept="3_F_VF" id="5Q6229KA4zd" role="3_F_jM">
+      <ref role="3_F_VE" node="5Q6229Kztdk" resolve="Element" />
+      <ref role="3_F_VC" node="5Q6229Kztdu" resolve="Directory" />
+    </node>
+    <node concept="3_Gd4C" id="5Q6229KA4zg" role="3_G82M">
       <property role="TrG5h" value="CycleException" />
       <property role="3_Gd4H" value="Cycle detected" />
     </node>
