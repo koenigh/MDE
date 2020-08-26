@@ -314,5 +314,67 @@
       <property role="3_Gd4H" value="Cycle detected" />
     </node>
   </node>
+  <node concept="3_Gd4U" id="1ZLMV0d4Y2W">
+    <property role="TrG5h" value="FileServiceWithContainment" />
+    <node concept="3_Gd56" id="1ZLMV0d4Y2X" role="3_Gd4Z">
+      <property role="TrG5h" value="Container" />
+    </node>
+    <node concept="3_Gd56" id="1ZLMV0d4Y32" role="3_Gd4Z">
+      <property role="TrG5h" value="Containee" />
+    </node>
+    <node concept="3_Gd56" id="1ZLMV0d4Y3a" role="3_Gd4Z">
+      <property role="TrG5h" value="Root" />
+    </node>
+    <node concept="3_Gd56" id="1ZLMV0d4Y3k" role="3_Gd4Z">
+      <property role="TrG5h" value="Directory" />
+    </node>
+    <node concept="3_Gd56" id="1ZLMV0d4Y3w" role="3_Gd4Z">
+      <property role="TrG5h" value="File" />
+    </node>
+    <node concept="3_FBDc" id="1ZLMV0d4Y3N" role="3_Gd4Z">
+      <property role="TrG5h" value="CerToCee" />
+      <node concept="2zC27e" id="1ZLMV0d4Y4f" role="3_Fx_f">
+        <property role="3_FBD6" value="contents" />
+        <ref role="3_FBDr" node="1ZLMV0d4Y32" resolve="Containee" />
+      </node>
+      <node concept="2zC0rd" id="1ZLMV0d4Y49" role="3_Fx_Q">
+        <property role="2zC0rY" value="1axOPyL0tmr/Containment" />
+        <node concept="2zC6PY" id="1ZLMV0d4Y4b" role="2zC0rK">
+          <property role="3_FBD6" value="containedIn" />
+          <ref role="2zC6PZ" node="1ZLMV0d4Y2X" resolve="Container" />
+        </node>
+      </node>
+    </node>
+    <node concept="3_FBDc" id="1ZLMV0d4Y4y" role="3_Gd4Z">
+      <property role="TrG5h" value="RootToCer" />
+      <node concept="3_FwNw" id="1ZLMV0d4Y4O" role="3_Fx_Q">
+        <ref role="3_FwNB" node="1ZLMV0d4Y3a" resolve="Root" />
+      </node>
+      <node concept="2zC27e" id="1ZLMV0d4Y4R" role="3_Fx_f">
+        <property role="3_FBD6" value="container" />
+        <property role="2zC27X" value="1axOPyL0vap/TotalMap" />
+        <ref role="3_FBDr" node="1ZLMV0d4Y2X" resolve="Container" />
+      </node>
+    </node>
+    <node concept="3_FBDc" id="1ZLMV0d4Y58" role="3_Gd4Z">
+      <property role="TrG5h" value="DirToCer" />
+      <node concept="3_FwNw" id="1ZLMV0d4Y5t" role="3_Fx_Q">
+        <ref role="3_FwNB" node="1ZLMV0d4Y3k" resolve="Directory" />
+      </node>
+      <node concept="2zC27e" id="1ZLMV0d4Y5w" role="3_Fx_f">
+        <property role="3_FBD6" value="container" />
+        <property role="2zC27X" value="1axOPyL0vap/TotalMap" />
+        <ref role="3_FBDr" node="1ZLMV0d4Y2X" resolve="Container" />
+      </node>
+    </node>
+    <node concept="3_F_VF" id="1ZLMV0d4Y4i" role="3_F_jM">
+      <ref role="3_F_VE" node="1ZLMV0d4Y32" resolve="Containee" />
+      <ref role="3_F_VC" node="1ZLMV0d4Y3k" resolve="Directory" />
+    </node>
+    <node concept="3_F_VF" id="1ZLMV0d4Y4k" role="3_F_jM">
+      <ref role="3_F_VE" node="1ZLMV0d4Y32" resolve="Containee" />
+      <ref role="3_F_VC" node="1ZLMV0d4Y3w" resolve="File" />
+    </node>
+  </node>
 </model>
 
