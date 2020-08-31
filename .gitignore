@@ -3,3 +3,5 @@
 /languages/MetaModel/generator/classes_gen/
 /solutions/pluginSolution/classes_gen/
 /solutions/SampleSolution/classes_gen/
+configuration.txt
+*.tst
