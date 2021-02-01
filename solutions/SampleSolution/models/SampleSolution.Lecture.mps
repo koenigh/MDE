@@ -151,7 +151,7 @@
       <node concept="3_Gd5r" id="6KWrYG_TzRH" role="3_Gd4E">
         <property role="3_Gd5q" value="addTransition" />
         <property role="3_Gd5o" value="addTransition" />
-        <property role="3_Gd5t" value="Fuegt eine Transition von from nach to mit Ereignis e hinzu" />
+        <property role="3_Gd5t" value="Fuegt eine Transition von &lt;from&gt; nach &lt;to&gt; mit Ereignis &lt;e&gt; hinzu" />
         <node concept="3_Gf45" id="6KWrYG_TzRJ" role="3_Gf4o">
           <property role="TrG5h" value="from" />
           <node concept="BxOjD" id="6KWrYG_TzRN" role="BBx2O">
@@ -173,7 +173,7 @@
       </node>
       <node concept="3_Gd5r" id="57R6S9Cq$F_" role="3_Gd4E">
         <property role="3_Gd5q" value="isDeterministic" />
-        <property role="3_Gd5o" value="isDeterministic" />
+        <property role="3_Gd5o" value="ist deterministisch?" />
         <property role="3_Gd5t" value="Liefert true genau dann, wenn dieser Automat deterministisch ist" />
         <node concept="BxOjD" id="57R6S9Cq$FI" role="BBx3f">
           <ref role="BxOjI" node="5H4ykBYMXkd" resolve="Boolean" />
@@ -198,6 +198,7 @@
       </node>
       <node concept="2zC27e" id="6KWrYG_TzWG" role="3_Fx_f">
         <property role="3_FBD6" value="states" />
+        <property role="2zC27X" value="1axOPyL0vaw/Set" />
         <ref role="3_FBDr" node="6KWrYG_TzRx" resolve="State" />
       </node>
     </node>
@@ -208,27 +209,26 @@
       </node>
       <node concept="2zC27e" id="6KWrYG_TzXR" role="3_Fx_f">
         <property role="3_FBD6" value="transitions" />
+        <property role="2zC27X" value="1axOPyL0vaw/Set" />
         <ref role="3_FBDr" node="5iYaeDUEYMu" resolve="Transition" />
       </node>
     </node>
-    <node concept="3_FBDc" id="6KWrYG_TzYs" role="3_Gd4Z">
+    <node concept="3_FBDc" id="5MOe6qqu08I" role="3_Gd4Z">
       <property role="TrG5h" value="SM_Events" />
-      <node concept="2zC0rd" id="6KWrYG_TzZ5" role="3_Fx_Q">
-        <property role="2zC0rY" value="1axOPyL0tmn/Injective" />
-        <node concept="2zC6PY" id="6KWrYG_TzZ7" role="2zC0rK">
-          <property role="3_FBD6" value="myStateMachine" />
-          <ref role="2zC6PZ" node="5iYaeDUEYOw" resolve="StateMachine" />
-        </node>
+      <node concept="3_FwNw" id="5MOe6qqu09p" role="3_Fx_Q">
+        <ref role="3_FwNB" node="5iYaeDUEYOw" resolve="StateMachine" />
       </node>
-      <node concept="2zC27e" id="6KWrYG_TzZb" role="3_Fx_f">
+      <node concept="2zC27e" id="5MOe6qqu09s" role="3_Fx_f">
         <property role="3_FBD6" value="events" />
+        <property role="2zC27X" value="1axOPyL0vaw/Set" />
         <ref role="3_FBDr" node="5iYaeDUEYM5" resolve="Event" />
       </node>
     </node>
     <node concept="3_Gd5r" id="6KWrYG_TzZe" role="2_wlaX">
       <property role="3_Gd5q" value="validate" />
-      <property role="3_Gd5o" value=" " />
-      <property role="3_Gd5t" value="Prueft, ob die Event-Folge w vom Automaten sm erkannt wird" />
+      <property role="3_Gd5o" value="validiere " />
+      <property role="3_Gd5t" value="Prueft, ob die Event-Folge w vom Automaten sm erkannt wird, wirft Exception, wenn nicht" />
+      <ref role="3NuQEv" node="34GtOWbQEXw" resolve="NotValidException" />
       <node concept="3_Gf45" id="6KWrYG_TzZg" role="3_Gf4o">
         <property role="TrG5h" value="sm" />
         <node concept="BxOjD" id="6KWrYG_TzZk" role="BBx2O">
@@ -242,9 +242,10 @@
           <ref role="BxOjI" node="5iYaeDUEYM5" resolve="Event" />
         </node>
       </node>
-      <node concept="BxOjD" id="6KWrYG_TzZw" role="BBx3f">
-        <ref role="BxOjI" node="5H4ykBYMXkd" resolve="Boolean" />
-      </node>
+    </node>
+    <node concept="3_Gd4C" id="34GtOWbQEXw" role="3_G82M">
+      <property role="TrG5h" value="NotValidException" />
+      <property role="3_Gd4H" value="Event Sequence was not recognized!" />
     </node>
   </node>
   <node concept="3_Gd4U" id="5Q6229Kztdj">
@@ -259,7 +260,7 @@
       <node concept="3_Gd5r" id="5Q6229KA4zr" role="3_Gd4E">
         <property role="3_Gd5q" value="contains" />
         <property role="3_Gd5o" value="contains" />
-        <property role="3_Gd5t" value="Prueft, ob e direkt oder indirekt in this enthalten oder ob e = this ist" />
+        <property role="3_Gd5t" value="Prueft, ob e direkt oder indirekt inthis enthalten ist oder ob e==this ist" />
         <property role="3e9aca" value="true" />
         <node concept="3_Gf45" id="5Q6229KA4zt" role="3_Gf4o">
           <property role="TrG5h" value="e" />
@@ -335,6 +336,7 @@
       <property role="TrG5h" value="CerToCee" />
       <node concept="2zC27e" id="1ZLMV0d4Y4f" role="3_Fx_f">
         <property role="3_FBD6" value="contents" />
+        <property role="2zC27X" value="1axOPyL0vaw/Set" />
         <ref role="3_FBDr" node="1ZLMV0d4Y32" resolve="Containee" />
       </node>
       <node concept="2zC0rd" id="1ZLMV0d4Y49" role="3_Fx_Q">
@@ -374,6 +376,84 @@
     <node concept="3_F_VF" id="1ZLMV0d4Y4k" role="3_F_jM">
       <ref role="3_F_VE" node="1ZLMV0d4Y32" resolve="Containee" />
       <ref role="3_F_VC" node="1ZLMV0d4Y3w" resolve="File" />
+    </node>
+  </node>
+  <node concept="3_Gd4U" id="1Y0FibwSlUn">
+    <property role="TrG5h" value="RelDemo" />
+    <node concept="3_Gd56" id="1Y0FibwSlUo" role="3_Gd4Z">
+      <property role="TrG5h" value="StateMachine" />
+    </node>
+    <node concept="3_Gd56" id="1Y0FibwSlUt" role="3_Gd4Z">
+      <property role="TrG5h" value="State" />
+      <node concept="2_wlaR" id="1Y0FibwSlUx" role="2_wlle">
+        <property role="3_FBD6" value="name" />
+        <ref role="3_FBDr" node="5H4ykBYMXjQ" resolve="String" />
+      </node>
+      <node concept="2_wlaR" id="1Y0FibwSlVn" role="2_wlle">
+        <property role="3_FBD6" value="isFinal" />
+        <ref role="3_FBDr" node="5H4ykBYMXkd" resolve="Boolean" />
+      </node>
+    </node>
+    <node concept="3_FBDc" id="1Y0FibwSlUC" role="3_Gd4Z">
+      <property role="TrG5h" value="SM_StartState" />
+      <node concept="3_FwNw" id="1Y0FibwSlUO" role="3_Fx_Q">
+        <ref role="3_FwNB" node="1Y0FibwSlUo" resolve="StateMachine" />
+      </node>
+      <node concept="2zC27e" id="1Y0FibwSlUR" role="3_Fx_f">
+        <property role="3_FBD6" value="startState" />
+        <ref role="3_FBDr" node="1Y0FibwSlUt" resolve="State" />
+      </node>
+    </node>
+    <node concept="3_FBDc" id="1Y0FibwSlV2" role="3_Gd4Z">
+      <property role="TrG5h" value="SM_States" />
+      <node concept="3_FwNw" id="1Y0FibwSlVh" role="3_Fx_Q">
+        <ref role="3_FwNB" node="1Y0FibwSlUo" resolve="StateMachine" />
+      </node>
+      <node concept="2zC27e" id="1Y0FibwSlVk" role="3_Fx_f">
+        <property role="3_FBD6" value="states" />
+        <property role="2zC27X" value="1axOPyL0vaw/Set" />
+        <ref role="3_FBDr" node="1Y0FibwSlUt" resolve="State" />
+      </node>
+    </node>
+    <node concept="3_Gd56" id="3J0jhG7K$Av" role="3_Gd4Z">
+      <property role="TrG5h" value="StatemachineSub1" />
+      <node concept="2_wlaR" id="3J0jhG7K$AG" role="2_wlle">
+        <property role="3_FBD6" value="attr1" />
+        <ref role="3_FBDr" node="5H4ykBYMXjQ" resolve="String" />
+      </node>
+    </node>
+    <node concept="3_Gd56" id="3J0jhG7K$AW" role="3_Gd4Z">
+      <property role="TrG5h" value="StateMachineSub2" />
+      <node concept="2_wlaR" id="3J0jhG7K$Bb" role="2_wlle">
+        <property role="3_FBD6" value="attr2" />
+        <ref role="3_FBDr" node="5H4ykBYMXjV" resolve="Integer" />
+      </node>
+    </node>
+    <node concept="3_Gd56" id="3J0jhG7K$Bt" role="3_Gd4Z">
+      <property role="TrG5h" value="StateSub1" />
+      <node concept="2_wlaR" id="3J0jhG7K$BI" role="2_wlle">
+        <property role="3_FBD6" value="attr3" />
+        <ref role="3_FBDr" node="5H4ykBYMXkd" resolve="Boolean" />
+      </node>
+    </node>
+    <node concept="3_Gd56" id="3J0jhG7K$C2" role="3_Gd4Z">
+      <property role="TrG5h" value="StateSub2" />
+    </node>
+    <node concept="3_F_VF" id="3J0jhG7K$Cl" role="3_F_jM">
+      <ref role="3_F_VE" node="1Y0FibwSlUo" resolve="StateMachine" />
+      <ref role="3_F_VC" node="3J0jhG7K$Av" resolve="StatemachineSub1" />
+    </node>
+    <node concept="3_F_VF" id="3J0jhG7K$Cn" role="3_F_jM">
+      <ref role="3_F_VE" node="1Y0FibwSlUo" resolve="StateMachine" />
+      <ref role="3_F_VC" node="3J0jhG7K$AW" resolve="StateMachineSub2" />
+    </node>
+    <node concept="3_F_VF" id="3J0jhG7K$Cq" role="3_F_jM">
+      <ref role="3_F_VE" node="1Y0FibwSlUt" resolve="State" />
+      <ref role="3_F_VC" node="3J0jhG7K$Bt" resolve="StateSub1" />
+    </node>
+    <node concept="3_F_VF" id="3J0jhG7K$Cu" role="3_F_jM">
+      <ref role="3_F_VE" node="1Y0FibwSlUt" resolve="State" />
+      <ref role="3_F_VC" node="3J0jhG7K$C2" resolve="StateSub2" />
     </node>
   </node>
 </model>

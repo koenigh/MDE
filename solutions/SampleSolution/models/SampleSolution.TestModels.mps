@@ -282,14 +282,13 @@
         <ref role="3_FBDr" node="6DgNd1vDGxP" resolve="B" />
       </node>
     </node>
-    <node concept="3_FBDc" id="5uArHlXxcZ6" role="3_Gd4Z">
-      <property role="TrG5h" value="ATest" />
-      <node concept="3_FwNw" id="5uArHlXxcZu" role="3_Fx_Q">
+    <node concept="3_FBDc" id="6drjlT4xnpV" role="3_Gd4Z">
+      <property role="TrG5h" value="Evil" />
+      <node concept="3_FwNw" id="6drjlT4xnqj" role="3_Fx_Q">
         <ref role="3_FwNB" node="6DgNd1vDGxH" resolve="A" />
       </node>
-      <node concept="2zC27e" id="5uArHlXxcZx" role="3_Fx_f">
-        <property role="3_FBD6" value="ctc" />
-        <property role="2zC27X" value="1axOPyL0vao/PartialMap" />
+      <node concept="2zC27e" id="6drjlT4xnqm" role="3_Fx_f">
+        <property role="3_FBD6" value="evil" />
         <ref role="3_FBDr" node="5H4ykBYMXkd" resolve="Boolean" />
       </node>
     </node>
@@ -299,7 +298,7 @@
     <node concept="3_Gd56" id="3Fzkql6Fixh" role="3_Gd4Z">
       <property role="TrG5h" value="C1" />
       <node concept="2_wlaR" id="3Fzkql6Fixj" role="2_wlle">
-        <property role="3_FBD6" value="rationals" />
+        <property role="3_FBD6" value="rational" />
         <ref role="3_FBDr" node="5H4ykBYMXk3" resolve="Rational" />
       </node>
       <node concept="2_wlaR" id="3Fzkql6Fixl" role="2_wlle">
@@ -308,7 +307,6 @@
         <ref role="3_FBDr" node="5H4ykBYMXjV" resolve="Integer" />
       </node>
       <node concept="2_wlaR" id="3Fzkql6Fixo" role="2_wlle">
-        <property role="2zC27X" value="5H4ykBYL_dN/List" />
         <property role="3_FBD6" value="listOfBooleans" />
         <ref role="3_FBDr" node="5H4ykBYMXkd" resolve="Boolean" />
       </node>
@@ -342,6 +340,10 @@
     </node>
     <node concept="3_Gd56" id="6cmoZ65suQ9" role="3_Gd4Z">
       <property role="TrG5h" value="C2" />
+      <node concept="2_wlaR" id="667e8z42Sx3" role="2_wlle">
+        <property role="3_FBD6" value="s" />
+        <ref role="3_FBDr" node="5H4ykBYMXjQ" resolve="String" />
+      </node>
     </node>
     <node concept="3_Gd56" id="7h7zEQ0RYSS" role="3_Gd4Z">
       <property role="TrG5h" value="C3" />
@@ -375,7 +377,7 @@
     <node concept="3_FBDc" id="6cmoZ65sxTn" role="3_Gd4Z">
       <property role="TrG5h" value="C1ToC2_3" />
       <node concept="2zC27e" id="6cmoZ65sxTI" role="3_Fx_f">
-        <property role="3_FBD6" value="c2Unique" />
+        <property role="3_FBD6" value="c2Maybe" />
         <property role="2zC27X" value="1axOPyL0vao/PartialMap" />
         <ref role="3_FBDr" node="6cmoZ65suQ9" resolve="C2" />
       </node>
@@ -396,7 +398,8 @@
         </node>
       </node>
       <node concept="2zC27e" id="5gGM1KkVp9n" role="3_Fx_f">
-        <property role="3_FBD6" value="theC2s" />
+        <property role="3_FBD6" value="theC2" />
+        <property role="2zC27X" value="1axOPyL0vao/PartialMap" />
         <ref role="3_FBDr" node="6cmoZ65suQ9" resolve="C2" />
       </node>
     </node>
@@ -459,7 +462,7 @@
       </node>
       <node concept="2zC27e" id="7vLdz1rYV$u" role="3_Fx_f">
         <property role="3_FBD6" value="theC" />
-        <property role="2zC27X" value="1axOPyL0vap/TotalMap" />
+        <property role="2zC27X" value="1axOPyL0vaw/Set" />
         <ref role="3_FBDr" node="7vLdz1rYV$2" resolve="C" />
       </node>
     </node>
@@ -546,9 +549,17 @@
         <property role="3_Gd5o" value="operation4" />
         <property role="3_Gd5t" value="this is operation4" />
       </node>
+      <node concept="2_wlaR" id="4V6m_UH2pC9" role="2_wlle">
+        <property role="3_FBD6" value="attr3" />
+        <ref role="3_FBDr" node="5H4ykBYMXkd" resolve="Boolean" />
+      </node>
     </node>
     <node concept="3_Gd56" id="6aCnphQJ7$M" role="3_Gd4Z">
       <property role="TrG5h" value="CD" />
+      <node concept="2_wlaR" id="4V6m_UH2pCb" role="2_wlle">
+        <property role="3_FBD6" value="attr4" />
+        <ref role="3_FBDr" node="5H4ykBYMXjQ" resolve="String" />
+      </node>
     </node>
     <node concept="3_F_VF" id="6aCnphQJ7$k" role="3_F_jM">
       <ref role="3_F_VE" node="6aCnphQJ7xW" resolve="CA" />
@@ -646,6 +657,7 @@
       </node>
       <node concept="2zC27e" id="6UwTTrgCfCK" role="3_Fx_f">
         <property role="3_FBD6" value="s2T1T1Set" />
+        <property role="2zC27X" value="1axOPyL0vaw/Set" />
         <ref role="3_FBDr" node="6UwTTrgCc_G" resolve="T1" />
       </node>
     </node>
@@ -677,7 +689,7 @@
       </node>
       <node concept="2zC27e" id="6UwTTrgDcj1" role="3_Fx_f">
         <property role="3_FBD6" value="t3s" />
-        <property role="2zC27X" value="5H4ykBYL_dN/List" />
+        <property role="2zC27X" value="1axOPyL0vaw/Set" />
         <ref role="3_FBDr" node="6UwTTrgDci1" resolve="T3" />
       </node>
     </node>
@@ -715,6 +727,7 @@
       <property role="TrG5h" value="S5ToT5" />
       <node concept="2zC27e" id="6UwTTrgDLZC" role="3_Fx_f">
         <property role="3_FBD6" value="t5s" />
+        <property role="2zC27X" value="5H4ykBYL_dN/List" />
         <ref role="3_FBDr" node="6UwTTrgDLY3" resolve="T5" />
       </node>
       <node concept="2zC0rd" id="6UwTTrgDLZ$" role="3_Fx_Q">
@@ -774,6 +787,22 @@
     <node concept="3_F_VF" id="6UwTTrgElzp" role="3_F_jM">
       <ref role="3_F_VC" node="6UwTTrgElyD" resolve="T6Sub" />
       <ref role="3_F_VE" node="6UwTTrgDM0c" resolve="T6" />
+    </node>
+  </node>
+  <node concept="3_Gd4U" id="6eJljPskOTp">
+    <property role="TrG5h" value="MultipleInheritance" />
+    <node concept="3_Gd56" id="6eJljPskOTq" role="3_Gd4Z">
+      <property role="TrG5h" value="B" />
+    </node>
+    <node concept="3_Gd56" id="6eJljPskOTv" role="3_Gd4Z">
+      <property role="TrG5h" value="A1" />
+    </node>
+    <node concept="3_Gd56" id="6eJljPskOTB" role="3_Gd4Z">
+      <property role="TrG5h" value="A2" />
+    </node>
+    <node concept="3_F_VF" id="6eJljPskOTG" role="3_F_jM">
+      <ref role="3_F_VE" node="6eJljPskOTv" resolve="A1" />
+      <ref role="3_F_VC" node="6eJljPskOTq" resolve="B" />
     </node>
   </node>
 </model>

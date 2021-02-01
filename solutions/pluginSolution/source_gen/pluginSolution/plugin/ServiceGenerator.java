@@ -6,17 +6,20 @@ import org.apache.log4j.Logger;
 import org.apache.log4j.LogManager;
 import org.jetbrains.mps.openapi.model.SNode;
 import metaModel.JService;
+import db.connection.DBConnectionData;
 import utilities.FileCreator;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 import java.util.ArrayList;
+import java.util.Date;
 import jetbrains.mps.lang.core.behavior.BaseConcept__BehaviorDescriptor;
+import jetbrains.mps.baseLanguage.logging.runtime.model.LoggingRuntime;
+import org.apache.log4j.Level;
 import java.io.IOException;
 import utilities.JServiceXMLWriter;
 import java.util.List;
-import java.util.Date;
-import javax.swing.JOptionPane;
 import javaASTTraversals.codeGeneration.JavaGenerator;
 import utilities.JServiceXMLReader;
+import javax.swing.JOptionPane;
 import java.io.File;
 import utilities.DirectoryManager;
 import jetbrains.mps.internal.collections.runtime.ListSequence;
@@ -40,9 +43,10 @@ import org.jetbrains.mps.openapi.language.SReferenceLink;
 import org.jetbrains.mps.openapi.model.SReference;
 import org.jetbrains.mps.openapi.language.SEnumeration;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
-import jetbrains.mps.baseLanguage.logging.runtime.model.LoggingRuntime;
-import org.apache.log4j.Level;
 import utilities.FileReader;
+import db.connection.DBConnectionManager;
+import java.sql.Connection;
+import java.sql.SQLException;
 import com.thoughtworks.xstream.XStream;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 
@@ -52,6 +56,7 @@ public class ServiceGenerator {
   private JService jService;
   private String protocolFileDirectory;
   private String javaIDEProjectDirectory;
+  private DBConnectionData dbConnectionData;
   private String fileSeparator = System.getProperty("file.separator");
   private FileCreator fileCreator;
   private String xmlFilePath = "";
@@ -61,14 +66,32 @@ public class ServiceGenerator {
     this.fileCreator = new FileCreator();
     this.node = node;
     this.mpsProjectPath = mpsProjectPath;
-    this.determineDirectories();
+    this.determineEnvironment();
     this.xmlFilePath = this.protocolFileDirectory + this.fileSeparator + "AST" + SPropertyOperations.getString(this.node, PROPS.name$tAp1) + ".xml";
   }
   public JService getMyService() {
     return this.jService;
   }
   public JService executeService() {
-    this.jService = this.processNode(new ArrayList<JService>());
+    try {
+      this.jService = this.processNode(new ArrayList<JService>());
+    } catch (Exception e) {
+      String message = e.getClass().getName() + "::: " + e.getMessage();
+      if (e.getCause() != null) {
+        message = message + ". Cause : " + e.getCause();
+      }
+      this.informationMessage("Java AST Creation was Aborted @ " + new Date().toString() + ". " + message);
+      this.writeProtocol(BaseConcept__BehaviorDescriptor.getPresentation_idhEwIMiw.invoke(this.node));
+      LoggingRuntime.logMsgView(Level.INFO, message + ". See also protocol file in " + this.protocolFileDirectory + "/" + BaseConcept__BehaviorDescriptor.getPresentation_idhEwIMiw.invoke(this.node) + ".txt", ServiceGenerator.class, null, null);
+      return null;
+    }
+    //  Database is always dropped!!! 
+    try {
+      this.dropDatabase(SPropertyOperations.getString(this.node, PROPS.name$tAp1));
+    } catch (Exception e) {
+      LoggingRuntime.logMsgView(Level.ERROR, "Initialization of Database " + SPropertyOperations.getString(this.node, PROPS.name$tAp1) + " failed! Maybe your DB is not Running?", ServiceGenerator.class, null, null);
+    }
+
     this.generateJavaCode();
     this.informationMessage("Carried out Code Generation for " + this.jService.getName() + ". Watch out for Syntax Errors in Generated Code!!!");
     try {
@@ -83,48 +106,38 @@ public class ServiceGenerator {
     new JServiceXMLWriter(this.jService).save(this.xmlFilePath);
     this.informationMessage("Created XML File at " + this.xmlFilePath);
   }
-  public JService processNode(List<JService> otherServices) {
+  public JService processNode(List<JService> otherServices) throws Exception {
     this.fileCreator.append("STARTING JAVA AST CREATION @ " + new Date().toString());
-    try {
-      this.appendStartingMessageSingle(this.node);
-      this.createJavaASTPhase1();
-      this.createJavaASTPhase2(otherServices);
-      this.jService.constraintCheck();
-      this.informationMessage("Successfully Finished Java AST Creation @ " + new Date().toString());
-    } catch (Exception e) {
-      this.informationMessage("Java AST Creation was Aborted @ " + new Date().toString());
-      String message = e.getClass().getName() + "::: " + e.getMessage();
-      if (e.getCause() != null) {
-        message = message + ". Cause : " + e.getCause();
-      }
-      JOptionPane.showMessageDialog(null, message);
-    }
+    this.appendStartingMessageSingle(this.node);
+    this.createJavaASTPhase1();
+    this.createJavaASTPhase2(otherServices);
+    this.jService.constraintCheck();
+    this.informationMessage("Successfully Finished Java AST Creation @ " + new Date().toString());
     return this.jService;
   }
   public void generateJavaCode() {
-    JavaGenerator javaGenerator = new JavaGenerator(this.javaIDEProjectDirectory);
+    JavaGenerator javaGenerator = new JavaGenerator(this.javaIDEProjectDirectory, this.dbConnectionData);
     JServiceXMLReader jsr = new JServiceXMLReader();
     List<Exception> protocol = javaGenerator.executeFor(this.jService, this.xmlFilePath);
     for (Exception e : protocol) {
       this.error(e.getMessage());
     }
   }
+
   public JService reInitializeService() {
-    int answer = JOptionPane.showConfirmDialog(null, "ATTENTION: This will overwrite your own Code in All Generated Classes. Do you want to proceed?");
+    int answer = JOptionPane.showConfirmDialog(null, "ATTENTION: This will Overwrite Your own Code in All Generated Classes! Do you want to proceed?");
     if (answer != JOptionPane.YES_OPTION) {
       return null;
     }
     File aSTFile = new File(this.xmlFilePath);
     aSTFile.delete();
     this.deleteDirectory(DirectoryManager.determineTargetDirectory(javaIDEProjectDirectory, SPropertyOperations.getString(this.node, PROPS.name$tAp1)));
-    return this.executeService();
-  }
-  private boolean deleteDirectory(File d) {
-    File[] files = d.listFiles();
-    for (int i = 0; i < files.length; i++) {
-      files[i].delete();
+    try {
+      this.dropDatabase(SPropertyOperations.getString(this.node, PROPS.name$tAp1));
+    } catch (Exception e) {
+      LoggingRuntime.logMsgView(Level.ERROR, "Initialization of Database " + SPropertyOperations.getString(this.node, PROPS.name$tAp1) + " failed! Maybe your DB is not Running?", ServiceGenerator.class, null, null);
     }
-    return d.delete();
+    return this.executeService();
   }
   private void createJavaASTPhase1() throws Exception {
     //  First pass of transformation: Transforms all Nodes to Java Objects, defers creation of target nodes of references, if target node has not been processed before source node  
@@ -132,8 +145,6 @@ public class ServiceGenerator {
     // // TODO: To reuse Exceptions vie references, JException has to be treated this way, too  
     // // If references to JASSOCIATION's can be deferred, this simply enables recursive date types     
     this.informationMessage("--> Starting Transformation Phase 1");
-    //  Root node is stored in JServiceContainer to be able to access it later on 
-    //  This is a relict from the time when I did not know that I can develop separate classes here 
     this.jService = new JService(BaseConcept__BehaviorDescriptor.getPresentation_idhEwIMiw.invoke(this.node));
     //  All directly contained nodes are explicitely PREPROCESSED 
     for (SNode exception : ListSequence.fromList(SLinkOperations.getChildren(this.node, LINKS.exceptions$lD8a))) {
@@ -396,19 +407,44 @@ public class ServiceGenerator {
     //  Cut off the "J" 
     return javaClassName.substring(1);
   }
-  private void determineDirectories() {
+  private void determineEnvironment() {
     try {
       List<String> lines = FileReader.readAsStringList(this.mpsProjectPath + this.fileSeparator + "configuration.txt");
       // Line 1: protocolFileDirectory = (e.g.) C:/Temp 
-      this.protocolFileDirectory = lines.get(0).split("=")[1].trim();
+      this.protocolFileDirectory = this.getValueFrom(lines, 0);
       // Line 2: eclipseProjectDirectory = (e.g.) C:/D/JavaWorkspace/MDEGen 
-      this.javaIDEProjectDirectory = lines.get(1).split("=")[1].trim();
+      this.javaIDEProjectDirectory = this.getValueFrom(lines, 1);
+      // Line 3-5: databaseConnectionData: URL, User, Password  
+      this.dbConnectionData = new DBConnectionData(this.getValueFrom(lines, 2), this.getValueFrom(lines, 3), this.getValueFrom(lines, 4));
     } catch (Exception e) {
-      this.informationMessage("Could not find the Configuration file. Using default Destinations C:/Temp.");
+      this.informationMessage("Could not find the Configuration File or could not read its Contents. Tried at " + this.mpsProjectPath + ". Using C:/Temp for Protocols and Default Data for mySQL Database at jdbc:mysql://localhost:3306 instead.");
       this.protocolFileDirectory = "C:" + this.fileSeparator + "Temp";
       this.javaIDEProjectDirectory = "C:" + this.fileSeparator + "Temp";
+      this.dbConnectionData = new DBConnectionData("jdbc:mysql://localhost:3306", "root", "");
     }
   }
+  private String getValueFrom(List<String> lines, Integer index) {
+    return lines.get(index).split("=")[1].trim();
+  }
+  private void dropDatabase(String databaseName) throws Exception {
+    DBConnectionManager.getTheInstance().openDBConnection(this.dbConnectionData);
+    Connection conn = DBConnectionManager.getTheInstance().get();
+    if (this.databaseExists(databaseName, conn)) {
+      DBConnectionManager.getTheInstance().get().createStatement().executeUpdate("DROP DATABASE " + databaseName);
+    }
+    DBConnectionManager.getTheInstance().close();
+  }
+  private boolean databaseExists(String databaseName, Connection conn) throws SQLException {
+    return conn.createStatement().executeQuery("SHOW DATABASES LIKE '" + databaseName + "'").next();
+  }
+  private boolean deleteDirectory(File d) {
+    File[] files = d.listFiles();
+    for (int i = 0; i < files.length; i++) {
+      files[i].delete();
+    }
+    return d.delete();
+  }
+
   private void streamTest() {
     // Temporary only for testing, same for next method 
     File f = new File("C:/Temp/hope.txt");

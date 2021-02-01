@@ -388,7 +388,7 @@
   <node concept="25R3W" id="1axOPyL0van">
     <property role="3F6X1D" value="1342586541813396119" />
     <property role="TrG5h" value="Multiplicity" />
-    <ref role="1H5jkz" node="1axOPyL0vaw" resolve="Set" />
+    <ref role="1H5jkz" node="1axOPyL0vap" resolve="TotalMap" />
     <node concept="25R33" id="1axOPyL0vao" role="25R1y">
       <property role="3tVfz5" value="1342586541813396120" />
       <property role="TrG5h" value="PartialMap" />

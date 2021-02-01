@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="andz248x416n5tzzbii6tkib3ndlbsq">
-  <files names="CompositeService.tst:InheritanceHandling.tst:OperationParameterTest.tst:RelationTest.tst:SmallService.tst:baseTypes.tst:genTestFromMPS.tst:inheritanceTest.tst" />
+<product version="3" modelHash="-85ix4tohfoevnhs2zbfkhko11oz50ac">
+  <files names="CompositeService.tst:InheritanceHandling.tst:MultipleInheritance.tst:OperationParameterTest.tst:RelationTest.tst:SmallService.tst:baseTypes.tst:genTestFromMPS.tst:inheritanceTest.tst" />
 </product>
 

@@ -16,6 +16,9 @@
     <modelRoot contentPath="${module}/libs/mde.jar!/" type="java_classes">
       <sourceRoot location="." />
     </modelRoot>
+    <modelRoot contentPath="${module}/libs/mysql-connector-java-8.0.22.jar!/" type="java_classes">
+      <sourceRoot location="." />
+    </modelRoot>
   </models>
   <stubModelEntries>
     <stubModelEntry path="${module}/libs/mde.jar" />
@@ -23,6 +26,7 @@
     <stubModelEntry path="${module}/libs/xmlpull-1.1.3.1.jar" />
     <stubModelEntry path="${module}/libs/xpp3_min-1.1.4c.jar" />
     <stubModelEntry path="${module}/libs/xstream-1.4.12.jar" />
+    <stubModelEntry path="${module}/libs/mysql-connector-java-8.0.22.jar" />
   </stubModelEntries>
   <sourcePath />
   <dependencies>

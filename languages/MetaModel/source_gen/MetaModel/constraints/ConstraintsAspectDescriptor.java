@@ -24,11 +24,9 @@ public class ConstraintsAspectDescriptor extends BaseConstraintsAspectDescriptor
         return new MapConnector_Constraints();
       case 2:
         return new PrimitiveType_Constraints();
-      case 3:
-        return new TargetConnector_Constraints();
       default:
     }
     return new BaseConstraintsDescriptor(concept);
   }
-  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0x9859e7a148764909L, 0xa6648a214c206698L, 0x5b448949fec5dbfeL), MetaIdFactory.conceptId(0x9859e7a148764909L, 0xa6648a214c206698L, 0x12a1d358b1020366L), MetaIdFactory.conceptId(0x9859e7a148764909L, 0xa6648a214c206698L, 0x355f4a6bd0ef9b28L), MetaIdFactory.conceptId(0x9859e7a148764909L, 0xa6648a214c206698L, 0x355f4a6bd0f1302fL)).seal();
+  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0x9859e7a148764909L, 0xa6648a214c206698L, 0x5b448949fec5dbfeL), MetaIdFactory.conceptId(0x9859e7a148764909L, 0xa6648a214c206698L, 0x12a1d358b1020366L), MetaIdFactory.conceptId(0x9859e7a148764909L, 0xa6648a214c206698L, 0x355f4a6bd0ef9b28L)).seal();
 }

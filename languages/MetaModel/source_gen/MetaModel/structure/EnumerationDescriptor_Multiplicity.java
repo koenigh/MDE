@@ -26,7 +26,7 @@ public class EnumerationDescriptor_Multiplicity extends EnumerationDescriptorBas
   @Nullable
   @Override
   public EnumerationDescriptor.MemberDescriptor getDefault() {
-    return myMember_Set_0;
+    return myMember_TotalMap_0;
   }
 
   @NotNull
