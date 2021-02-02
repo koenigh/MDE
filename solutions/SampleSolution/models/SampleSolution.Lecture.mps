@@ -382,6 +382,10 @@
     <property role="TrG5h" value="RelDemo" />
     <node concept="3_Gd56" id="1Y0FibwSlUo" role="3_Gd4Z">
       <property role="TrG5h" value="StateMachine" />
+      <node concept="2_wlaR" id="2SSmSBX44CM" role="2_wlle">
+        <property role="3_FBD6" value="text" />
+        <ref role="3_FBDr" node="5H4ykBYMXjQ" resolve="String" />
+      </node>
     </node>
     <node concept="3_Gd56" id="1Y0FibwSlUt" role="3_Gd4Z">
       <property role="TrG5h" value="State" />

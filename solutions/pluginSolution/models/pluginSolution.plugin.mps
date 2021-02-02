@@ -6980,6 +6980,23 @@
     <node concept="3clFb_" id="KnhnSDMKEV" role="jymVt">
       <property role="TrG5h" value="deleteDirectory" />
       <node concept="3clFbS" id="KnhnSDMKEY" role="3clF47">
+        <node concept="3clFbJ" id="4h0T3AgDWcG" role="3cqZAp">
+          <node concept="3clFbS" id="4h0T3AgDWcI" role="3clFbx">
+            <node concept="3cpWs6" id="4h0T3AgE4EC" role="3cqZAp">
+              <node concept="3clFbT" id="4h0T3AgE4J4" role="3cqZAk" />
+            </node>
+          </node>
+          <node concept="3fqX7Q" id="4h0T3AgE3Dv" role="3clFbw">
+            <node concept="2OqwBi" id="4h0T3AgE3Dx" role="3fr31v">
+              <node concept="37vLTw" id="4h0T3AgE3Dy" role="2Oq$k0">
+                <ref role="3cqZAo" node="KnhnSDMQwK" resolve="d" />
+              </node>
+              <node concept="liA8E" id="4h0T3AgE3Dz" role="2OqNvi">
+                <ref role="37wK5l" to="guwi:~File.exists()" resolve="exists" />
+              </node>
+            </node>
+          </node>
+        </node>
         <node concept="3cpWs8" id="KnhnSDMXy0" role="3cqZAp">
           <node concept="3cpWsn" id="KnhnSDMXy1" role="3cpWs9">
             <property role="TrG5h" value="files" />

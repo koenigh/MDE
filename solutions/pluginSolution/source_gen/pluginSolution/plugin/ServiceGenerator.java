@@ -438,6 +438,9 @@ public class ServiceGenerator {
     return conn.createStatement().executeQuery("SHOW DATABASES LIKE '" + databaseName + "'").next();
   }
   private boolean deleteDirectory(File d) {
+    if (!(d.exists())) {
+      return false;
+    }
     File[] files = d.listFiles();
     for (int i = 0; i < files.length; i++) {
       files[i].delete();
