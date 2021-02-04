@@ -805,5 +805,36 @@
       <ref role="3_F_VC" node="6eJljPskOTq" resolve="B" />
     </node>
   </node>
+  <node concept="3_Gd4U" id="4Fy$WcmJhms">
+    <property role="TrG5h" value="SingletonTest" />
+    <node concept="3_Gd56" id="4Fy$WcmJkoP" role="3_Gd4Z">
+      <property role="TrG5h" value="Client" />
+    </node>
+    <node concept="3_Gd56" id="4Fy$WcmJhmt" role="3_Gd4Z">
+      <property role="TrG5h" value="Super" />
+      <node concept="2_wlaR" id="4Fy$WcmJhmA" role="2_wlle">
+        <property role="3_FBD6" value="value" />
+        <ref role="3_FBDr" node="5H4ykBYMXjV" resolve="Integer" />
+      </node>
+    </node>
+    <node concept="3_Gd56" id="4Fy$WcmJhmy" role="3_Gd4Z">
+      <property role="TrG5h" value="Singleton1" />
+      <property role="3_Gd55" value="true" />
+    </node>
+    <node concept="3_F_VF" id="4Fy$WcmJkoI" role="3_F_jM">
+      <ref role="3_F_VE" node="4Fy$WcmJhmt" resolve="Super" />
+      <ref role="3_F_VC" node="4Fy$WcmJhmy" resolve="Singleton1" />
+    </node>
+    <node concept="3_FBDc" id="4Fy$WcmJkp1" role="3_Gd4Z">
+      <property role="TrG5h" value="ClientToSuper" />
+      <node concept="3_FwNw" id="4Fy$WcmJkpe" role="3_Fx_Q">
+        <ref role="3_FwNB" node="4Fy$WcmJkoP" resolve="Client" />
+      </node>
+      <node concept="2zC27e" id="4Fy$WcmJkph" role="3_Fx_f">
+        <property role="3_FBD6" value="supa" />
+        <ref role="3_FBDr" node="4Fy$WcmJhmt" resolve="Super" />
+      </node>
+    </node>
+  </node>
 </model>
 
