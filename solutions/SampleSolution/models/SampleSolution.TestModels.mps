@@ -825,14 +825,31 @@
       <ref role="3_F_VE" node="4Fy$WcmJhmt" resolve="Super" />
       <ref role="3_F_VC" node="4Fy$WcmJhmy" resolve="Singleton1" />
     </node>
-    <node concept="3_FBDc" id="4Fy$WcmJkp1" role="3_Gd4Z">
-      <property role="TrG5h" value="ClientToSuper" />
-      <node concept="3_FwNw" id="4Fy$WcmJkpe" role="3_Fx_Q">
-        <ref role="3_FwNB" node="4Fy$WcmJkoP" resolve="Client" />
+    <node concept="3_F_VF" id="2tYj3IbTH7B" role="3_F_jM">
+      <ref role="3_F_VE" node="4Fy$WcmJhmt" resolve="Super" />
+      <ref role="3_F_VC" node="2tYj3IbTE5l" resolve="Singleton2" />
+    </node>
+    <node concept="3_Gd56" id="2tYj3IbTE5l" role="3_Gd4Z">
+      <property role="TrG5h" value="Singleton2" />
+      <property role="3_Gd55" value="true" />
+      <node concept="2_wlaR" id="2tYj3IbTE5v" role="2_wlle">
+        <property role="3_FBD6" value="specialAttr" />
+        <ref role="3_FBDr" node="5H4ykBYMXk3" resolve="Rational" />
       </node>
-      <node concept="2zC27e" id="4Fy$WcmJkph" role="3_Fx_f">
-        <property role="3_FBD6" value="supa" />
-        <ref role="3_FBDr" node="4Fy$WcmJhmt" resolve="Super" />
+      <node concept="2_wlaR" id="5tUKBsRpl6L" role="2_wlle">
+        <property role="3_FBD6" value="booleanValue" />
+        <ref role="3_FBDr" node="5H4ykBYMXkd" resolve="Boolean" />
+      </node>
+    </node>
+    <node concept="3_FBDc" id="5tUKBsRpo9W" role="3_Gd4Z">
+      <property role="TrG5h" value="A" />
+      <node concept="3_FwNw" id="5tUKBsRpoac" role="3_Fx_Q">
+        <ref role="3_FwNB" node="4Fy$WcmJhmt" resolve="Super" />
+      </node>
+      <node concept="2zC27e" id="5tUKBsRpoaf" role="3_Fx_f">
+        <property role="3_FBD6" value="c" />
+        <property role="2zC27X" value="1axOPyL0vao/PartialMap" />
+        <ref role="3_FBDr" node="4Fy$WcmJkoP" resolve="Client" />
       </node>
     </node>
   </node>
