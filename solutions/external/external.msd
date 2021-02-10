@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <solution name="external" uuid="ec9a4d55-63ff-4cf2-ad33-52da8efb202a" moduleVersion="0" compileInMPS="true">
   <models>
-    <modelRoot contentPath="${module}/libs/picocog-1.0.2.jar!/" type="java_classes">
-      <sourceRoot location="." />
-    </modelRoot>
     <modelRoot contentPath="${module}/libs/xmlpull-1.1.3.1.jar!/" type="java_classes">
       <sourceRoot location="." />
     </modelRoot>
@@ -13,10 +10,7 @@
     <modelRoot contentPath="${module}/libs/xstream-1.4.12.jar!/" type="java_classes">
       <sourceRoot location="." />
     </modelRoot>
-    <modelRoot contentPath="${module}/libs/mde.jar!/" type="java_classes">
-      <sourceRoot location="." />
-    </modelRoot>
-    <modelRoot contentPath="${module}/libs/mysql-connector-java-8.0.22.jar!/" type="java_classes">
+    <modelRoot contentPath="${module}/libs" type="java_classes">
       <sourceRoot location="." />
     </modelRoot>
   </models>

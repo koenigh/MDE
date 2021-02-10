@@ -5,10 +5,17 @@
       <sourceRoot location="." />
     </modelRoot>
   </models>
+  <stubModelEntries>
+    <stubModelEntry path="C:/Users/König/MPPSProjects/MDSD/solutions/external/libs/mde.jar" />
+    <stubModelEntry path="C:/Users/König/MPPSProjects/MDSD/solutions/external/libs/mysql-connector-java-8.0.22.jar" />
+    <stubModelEntry path="C:/Users/König/MPPSProjects/MDSD/solutions/external/libs/picocog-1.0.2.jar" />
+    <stubModelEntry path="C:/Users/König/MPPSProjects/MDSD/solutions/external/libs/xmlpull-1.1.3.1.jar" />
+    <stubModelEntry path="C:/Users/König/MPPSProjects/MDSD/solutions/external/libs/xpp3_min-1.1.4c.jar" />
+    <stubModelEntry path="C:/Users/König/MPPSProjects/MDSD/solutions/external/libs/xstream-1.4.12.jar" />
+  </stubModelEntries>
   <sourcePath />
   <dependencies>
     <dependency reexport="false">6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)</dependency>
-    <dependency reexport="false">ec9a4d55-63ff-4cf2-ad33-52da8efb202a(external)</dependency>
     <dependency reexport="false">498d89d2-c2e9-11e2-ad49-6cf049e62fe5(MPS.IDEA)</dependency>
     <dependency reexport="false">8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)</dependency>
     <dependency reexport="false">86441d7a-e194-42da-81a5-2161ec62a379(MPS.Workbench)</dependency>
@@ -18,6 +25,7 @@
     <dependency reexport="false">2d3c70e9-aab2-4870-8d8d-6036800e4103(jetbrains.mps.kernel)</dependency>
     <dependency reexport="false">9859e7a1-4876-4909-a664-8a214c206698(MetaModel)</dependency>
     <dependency reexport="false">642f71f8-327a-425b-84f9-44ad58786d27(jetbrains.mps.lang.project.modules)</dependency>
+    <dependency reexport="false">ec9a4d55-63ff-4cf2-ad33-52da8efb202a(external)</dependency>
   </dependencies>
   <languageVersions>
     <language slang="l:9859e7a1-4876-4909-a664-8a214c206698:MetaModel" version="0" />

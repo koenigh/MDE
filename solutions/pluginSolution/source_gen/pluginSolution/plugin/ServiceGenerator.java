@@ -125,7 +125,7 @@ public class ServiceGenerator {
   }
 
   public JService reInitializeService() {
-    int answer = JOptionPane.showConfirmDialog(null, "ATTENTION: This will Overwrite Your own Code in All Generated Classes! Do you want to proceed?");
+    int answer = JOptionPane.showConfirmDialog(null, "ATTENTION: This will Overwrite your own Code in All Generated Classes! Do you want to Proceed?");
     if (answer != JOptionPane.YES_OPTION) {
       return null;
     }
@@ -135,7 +135,7 @@ public class ServiceGenerator {
     try {
       this.dropDatabase(SPropertyOperations.getString(this.node, PROPS.name$tAp1));
     } catch (Exception e) {
-      LoggingRuntime.logMsgView(Level.ERROR, "Initialization of Database " + SPropertyOperations.getString(this.node, PROPS.name$tAp1) + " failed! Maybe your DB is not Running?", ServiceGenerator.class, null, null);
+      LoggingRuntime.logMsgView(Level.ERROR, "Initialization of Database " + SPropertyOperations.getString(this.node, PROPS.name$tAp1) + " failed! Maybe your DB is not running?", ServiceGenerator.class, null, null);
     }
     return this.executeService();
   }
@@ -467,7 +467,7 @@ public class ServiceGenerator {
     fc.append(xmlContents);
     try {
       fc.createFile(f);
-      JOptionPane.showMessageDialog(null, "Successfully created XML File: ");
+      JOptionPane.showMessageDialog(null, "Successfully Created XML File: ");
     } catch (Exception e) {
       JOptionPane.showMessageDialog(null, "Exception when creating XML File: " + e.getMessage());
     }

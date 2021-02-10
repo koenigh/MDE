@@ -44,7 +44,7 @@ public class ModelGenerator {
         if (e.getCause() != null) {
           message = message + ". Cause : " + e.getCause();
         }
-        serviceGenerator.informationMessage("Java AST Creation was Aborted @ " + new Date().toString() + ". " + message);
+        serviceGenerator.informationMessage("Java AST Creation was Aborted @  " + new Date().toString() + ". " + message);
         serviceGenerator.writeProtocol(BaseConcept__BehaviorDescriptor.getPresentation_idhEwIMiw.invoke(currentNode));
         LoggingRuntime.logMsgView(Level.INFO, message + ". Aborted Model Compilation! ", ModelGenerator.class, null, null);
         return null;

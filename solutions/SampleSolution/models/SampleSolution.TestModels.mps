@@ -809,11 +809,16 @@
     <property role="TrG5h" value="SingletonTest" />
     <node concept="3_Gd56" id="4Fy$WcmJkoP" role="3_Gd4Z">
       <property role="TrG5h" value="Client" />
+      <node concept="2_wlaR" id="1IoHUuQEZDW" role="2_wlle">
+        <property role="3_FBD6" value="anything" />
+        <ref role="3_FBDr" node="5H4ykBYMXkd" resolve="Boolean" />
+      </node>
     </node>
     <node concept="3_Gd56" id="4Fy$WcmJhmt" role="3_Gd4Z">
       <property role="TrG5h" value="Super" />
       <node concept="2_wlaR" id="4Fy$WcmJhmA" role="2_wlle">
         <property role="3_FBD6" value="value" />
+        <property role="2zC27X" value="1axOPyL0vao/PartialMap" />
         <ref role="3_FBDr" node="5H4ykBYMXjV" resolve="Integer" />
       </node>
     </node>
@@ -834,22 +839,24 @@
       <property role="3_Gd55" value="true" />
       <node concept="2_wlaR" id="2tYj3IbTE5v" role="2_wlle">
         <property role="3_FBD6" value="specialAttr" />
+        <property role="2zC27X" value="1axOPyL0vao/PartialMap" />
         <ref role="3_FBDr" node="5H4ykBYMXk3" resolve="Rational" />
       </node>
       <node concept="2_wlaR" id="5tUKBsRpl6L" role="2_wlle">
         <property role="3_FBD6" value="booleanValue" />
+        <property role="2zC27X" value="1axOPyL0vao/PartialMap" />
         <ref role="3_FBDr" node="5H4ykBYMXkd" resolve="Boolean" />
       </node>
     </node>
     <node concept="3_FBDc" id="5tUKBsRpo9W" role="3_Gd4Z">
       <property role="TrG5h" value="A" />
       <node concept="3_FwNw" id="5tUKBsRpoac" role="3_Fx_Q">
-        <ref role="3_FwNB" node="4Fy$WcmJhmt" resolve="Super" />
+        <ref role="3_FwNB" node="4Fy$WcmJkoP" resolve="Client" />
       </node>
       <node concept="2zC27e" id="5tUKBsRpoaf" role="3_Fx_f">
-        <property role="3_FBD6" value="c" />
+        <property role="3_FBD6" value="s" />
         <property role="2zC27X" value="1axOPyL0vao/PartialMap" />
-        <ref role="3_FBDr" node="4Fy$WcmJkoP" resolve="Client" />
+        <ref role="3_FBDr" node="4Fy$WcmJhmt" resolve="Super" />
       </node>
     </node>
   </node>

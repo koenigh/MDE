@@ -50,6 +50,7 @@
       </concept>
       <concept id="3845874433725012776" name="MetaModel.structure.PrimitiveType" flags="ng" index="3_Gd53" />
       <concept id="3845874433725012781" name="MetaModel.structure.Class" flags="ng" index="3_Gd56">
+        <property id="3845874433725012782" name="singleton" index="3_Gd55" />
         <child id="6576532306767764487" name="attributes" index="2_wlle" />
         <child id="3845874433725012801" name="operations" index="3_Gd4E" />
       </concept>
@@ -465,7 +466,7 @@
     <node concept="3_Gd56" id="7TRE$ebJmMf" role="3_Gd4Z">
       <property role="TrG5h" value="Saal" />
       <node concept="2_wlaR" id="7TRE$ebJmMh" role="2_wlle">
-        <property role="3_FBD6" value="aktiv" />
+        <property role="3_FBD6" value="active" />
         <ref role="3_FBDr" node="5H4ykBYMXkd" resolve="Boolean" />
       </node>
     </node>
@@ -517,14 +518,17 @@
       <property role="TrG5h" value="Kategorie" />
       <node concept="2_wlaR" id="7TRE$ebJmOm" role="2_wlle">
         <property role="3_FBD6" value="price" />
+        <property role="2zC27X" value="1axOPyL0vao/PartialMap" />
         <ref role="3_FBDr" node="5H4ykBYMXk3" resolve="Rational" />
       </node>
     </node>
     <node concept="3_Gd56" id="7TRE$ebJmPy" role="3_Gd4Z">
       <property role="TrG5h" value="Parkett" />
+      <property role="3_Gd55" value="true" />
     </node>
     <node concept="3_Gd56" id="7TRE$ebJmQe" role="3_Gd4Z">
       <property role="TrG5h" value="Hinterbank" />
+      <property role="3_Gd55" value="true" />
     </node>
     <node concept="3_FBDc" id="7TRE$ebJmOE" role="3_Gd4Z">
       <property role="TrG5h" value="ReihenKategorie" />
