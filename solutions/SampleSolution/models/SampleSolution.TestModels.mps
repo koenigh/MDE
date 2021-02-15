@@ -230,7 +230,7 @@
       <property role="TrG5h" value="A" />
       <property role="3_Gd55" value="true" />
       <node concept="2_wlaR" id="6DgNd1vDGxJ" role="2_wlle">
-        <property role="2zC27X" value="1axOPyL0vap/TotalMap" />
+        <property role="2zC27X" value="1axOPyL0vao/PartialMap" />
         <property role="3_FBD6" value="x" />
         <ref role="3_FBDr" node="5H4ykBYMXjV" resolve="Integer" />
       </node>
@@ -260,7 +260,6 @@
     <node concept="3_FBDc" id="6DgNd1vDGyr" role="3_Gd4Z">
       <property role="TrG5h" value="AToB" />
       <node concept="2zC0rd" id="6DgNd1vDKhw" role="3_Fx_Q">
-        <property role="2zC0rY" value="1axOPyL0tmr/Containment" />
         <node concept="2zC6PY" id="6DgNd1vDKhy" role="2zC0rK">
           <property role="3_FBD6" value="theA" />
           <ref role="2zC6PZ" node="6DgNd1vDGxH" resolve="A" />
@@ -279,17 +278,8 @@
       </node>
       <node concept="2zC27e" id="193C_ORfWde" role="3_Fx_f">
         <property role="3_FBD6" value="rlle" />
+        <property role="2zC27X" value="1axOPyL0vao/PartialMap" />
         <ref role="3_FBDr" node="6DgNd1vDGxP" resolve="B" />
-      </node>
-    </node>
-    <node concept="3_FBDc" id="6drjlT4xnpV" role="3_Gd4Z">
-      <property role="TrG5h" value="Evil" />
-      <node concept="3_FwNw" id="6drjlT4xnqj" role="3_Fx_Q">
-        <ref role="3_FwNB" node="6DgNd1vDGxH" resolve="A" />
-      </node>
-      <node concept="2zC27e" id="6drjlT4xnqm" role="3_Fx_f">
-        <property role="3_FBD6" value="evil" />
-        <ref role="3_FBDr" node="5H4ykBYMXkd" resolve="Boolean" />
       </node>
     </node>
   </node>
@@ -810,7 +800,7 @@
     <node concept="3_Gd56" id="4Fy$WcmJkoP" role="3_Gd4Z">
       <property role="TrG5h" value="Client" />
       <node concept="2_wlaR" id="1IoHUuQEZDW" role="2_wlle">
-        <property role="3_FBD6" value="anything" />
+        <property role="3_FBD6" value="attr" />
         <ref role="3_FBDr" node="5H4ykBYMXkd" resolve="Boolean" />
       </node>
     </node>
@@ -857,6 +847,30 @@
         <property role="3_FBD6" value="s" />
         <property role="2zC27X" value="1axOPyL0vao/PartialMap" />
         <ref role="3_FBDr" node="4Fy$WcmJhmt" resolve="Super" />
+      </node>
+    </node>
+  </node>
+  <node concept="3_Gd4U" id="41p8GaCtDWI">
+    <property role="TrG5h" value="ContainmentTest" />
+    <node concept="3_Gd56" id="41p8GaCtDWJ" role="3_Gd4Z">
+      <property role="TrG5h" value="Container" />
+    </node>
+    <node concept="3_Gd56" id="41p8GaCtDWO" role="3_Gd4Z">
+      <property role="TrG5h" value="Containee" />
+    </node>
+    <node concept="3_FBDc" id="41p8GaCtDWW" role="3_Gd4Z">
+      <property role="TrG5h" value="CC" />
+      <node concept="2zC0rd" id="41p8GaCtDX7" role="3_Fx_Q">
+        <property role="2zC0rY" value="1axOPyL0tmr/Containment" />
+        <node concept="2zC6PY" id="41p8GaCtDX9" role="2zC0rK">
+          <property role="3_FBD6" value="container" />
+          <ref role="2zC6PZ" node="41p8GaCtDWJ" resolve="Container" />
+        </node>
+      </node>
+      <node concept="2zC27e" id="41p8GaCtGZj" role="3_Fx_f">
+        <property role="3_FBD6" value="containee" />
+        <property role="2zC27X" value="1axOPyL0vao/PartialMap" />
+        <ref role="3_FBDr" node="41p8GaCtDWO" resolve="Containee" />
       </node>
     </node>
   </node>
