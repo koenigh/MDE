@@ -476,6 +476,10 @@
           </node>
         </node>
       </node>
+      <node concept="2_wlaR" id="5DPSB9hKjCO" role="2_wlle">
+        <property role="3_FBD6" value="updata" />
+        <ref role="3_FBDr" node="5H4ykBYMXjQ" resolve="String" />
+      </node>
     </node>
     <node concept="3_Gd56" id="5VAzo2B$27Q" role="3_Gd4Z">
       <property role="TrG5h" value="Reihe" />
@@ -509,6 +513,19 @@
     <node concept="3_Gd4C" id="5VAzo2B$28c" role="3_G82M">
       <property role="TrG5h" value="NotAvailable" />
       <property role="3_Gd4H" value="Diese Kategorie ist ausverkauft" />
+    </node>
+    <node concept="3_Gd56" id="5DPSB9hKjC_" role="3_Gd4Z">
+      <property role="TrG5h" value="Person" />
+    </node>
+    <node concept="3_FBDc" id="5DPSB9hKjD6" role="3_Gd4Z">
+      <property role="TrG5h" value="select" />
+      <node concept="3_FwNw" id="5DPSB9hKjDt" role="3_Fx_Q">
+        <ref role="3_FwNB" node="5VAzo2B$281" resolve="Sitz" />
+      </node>
+      <node concept="2zC27e" id="5DPSB9hKjDw" role="3_Fx_f">
+        <property role="3_FBD6" value="reihe" />
+        <ref role="3_FBDr" node="5VAzo2B$27Q" resolve="Reihe" />
+      </node>
     </node>
   </node>
 </model>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="-5iuhpn54xr3d1nbhpu2erkds6ywzgoj">
-  <files names="FileService.tst:FileServiceWithContainment.tst:RelDemo.tst:Validation.tst:baseTypes.tst" />
+<product version="3" modelHash="1i34tgibvo8p5nu01jkjy46488g1dl0">
+  <files names="FileService.tst:FileServiceWithContainment.tst:KinoApp.tst:RelDemo.tst:Validation.tst:baseTypes.tst" />
 </product>
 
