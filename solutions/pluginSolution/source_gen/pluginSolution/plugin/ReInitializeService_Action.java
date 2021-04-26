@@ -17,7 +17,7 @@ public class ReInitializeService_Action extends BaseAction {
   private static final Icon ICON = null;
 
   public ReInitializeService_Action() {
-    super("Clean Compile", "Deletes all generated artefacts of this service and generates it new", ICON);
+    super("Delete Code and Create New Compile Unit ", "Deletes all generated artefacts of this service and generates them new", ICON);
     this.setIsAlwaysVisible(true);
     this.setExecuteOutsideCommand(false);
   }

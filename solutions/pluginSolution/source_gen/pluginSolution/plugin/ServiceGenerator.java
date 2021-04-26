@@ -19,7 +19,6 @@ import utilities.JServiceXMLWriter;
 import java.util.List;
 import javaASTTraversals.codeGeneration.JavaGenerator;
 import utilities.JServiceXMLReader;
-import javax.swing.JOptionPane;
 import java.io.File;
 import utilities.DirectoryManager;
 import jetbrains.mps.internal.collections.runtime.ListSequence;
@@ -44,10 +43,7 @@ import org.jetbrains.mps.openapi.model.SReference;
 import org.jetbrains.mps.openapi.language.SEnumeration;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import utilities.FileReader;
-import db.connection.DBConnectionManager;
-import java.sql.Connection;
-import java.sql.SQLException;
-import com.thoughtworks.xstream.XStream;
+import db.executer.PersistenceExecuterFactory;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 
 public class ServiceGenerator {
@@ -61,10 +57,12 @@ public class ServiceGenerator {
   private FileCreator fileCreator;
   private String xmlFilePath = "";
   private String mpsProjectPath;
+  private String errorOnInitialisingDB;
 
   public ServiceGenerator(SNode node, String mpsProjectPath) {
     this.fileCreator = new FileCreator();
     this.node = node;
+    this.errorOnInitialisingDB = "Initialization of Database " + SPropertyOperations.getString(this.node, PROPS.name$tAp1) + " failed! Maybe your DB is not Running?";
     this.mpsProjectPath = mpsProjectPath;
     this.determineEnvironment();
     this.xmlFilePath = this.protocolFileDirectory + this.fileSeparator + "AST" + SPropertyOperations.getString(this.node, PROPS.name$tAp1) + ".xml";
@@ -82,16 +80,10 @@ public class ServiceGenerator {
       }
       this.informationMessage("Java AST Creation was Aborted @ " + new Date().toString() + ". " + message);
       this.writeProtocol(BaseConcept__BehaviorDescriptor.getPresentation_idhEwIMiw.invoke(this.node));
-      LoggingRuntime.logMsgView(Level.INFO, message + ". See also protocol file in " + this.protocolFileDirectory + "/" + BaseConcept__BehaviorDescriptor.getPresentation_idhEwIMiw.invoke(this.node) + ".txt", ServiceGenerator.class, null, null);
+      LoggingRuntime.logMsgView(Level.INFO, message + ". See also protocol file in " + this.protocolFileDirectory + this.fileSeparator + BaseConcept__BehaviorDescriptor.getPresentation_idhEwIMiw.invoke(this.node) + ".txt", ServiceGenerator.class, null, null);
       return null;
     }
-    //  Database is always dropped!!! 
-    try {
-      this.dropDatabase(SPropertyOperations.getString(this.node, PROPS.name$tAp1));
-    } catch (Exception e) {
-      LoggingRuntime.logMsgView(Level.ERROR, "Initialization of Database " + SPropertyOperations.getString(this.node, PROPS.name$tAp1) + " failed! Maybe your DB is not Running?", ServiceGenerator.class, null, null);
-    }
-
+    this.dropDatabase(SPropertyOperations.getString(this.node, PROPS.name$tAp1));
     this.generateJavaCode();
     this.informationMessage("Carried out Code Generation for " + this.jService.getName() + ". Watch out for Syntax Errors in Generated Code!!!");
     try {
@@ -125,18 +117,10 @@ public class ServiceGenerator {
   }
 
   public JService reInitializeService() {
-    int answer = JOptionPane.showConfirmDialog(null, "ATTENTION: This will Overwrite your own Code in All Generated Classes! Do you want to Proceed?");
-    if (answer != JOptionPane.YES_OPTION) {
-      return null;
-    }
     File aSTFile = new File(this.xmlFilePath);
     aSTFile.delete();
     this.deleteDirectory(DirectoryManager.determineTargetDirectory(javaIDEProjectDirectory, SPropertyOperations.getString(this.node, PROPS.name$tAp1)));
-    try {
-      this.dropDatabase(SPropertyOperations.getString(this.node, PROPS.name$tAp1));
-    } catch (Exception e) {
-      LoggingRuntime.logMsgView(Level.ERROR, "Initialization of Database " + SPropertyOperations.getString(this.node, PROPS.name$tAp1) + " failed! Maybe your DB is not running?", ServiceGenerator.class, null, null);
-    }
+    this.dropDatabase(SPropertyOperations.getString(this.node, PROPS.name$tAp1));
     return this.executeService();
   }
   private void createJavaASTPhase1() throws Exception {
@@ -386,7 +370,7 @@ public class ServiceGenerator {
       //  E.g. "C:/Temp/" + serviceName + ".txt" 
       String filePath = this.protocolFileDirectory + this.fileSeparator + serviceName + ".txt";
       this.fileCreator.createFile(new File(filePath));
-      LoggingRuntime.logMsgView(Level.INFO, "Transformation finished. See protocol file " + this.protocolFileDirectory + "/" + serviceName + ".txt", ServiceGenerator.class, null, null);
+      LoggingRuntime.logMsgView(Level.INFO, "Transformation finished. See protocol file " + this.protocolFileDirectory + this.fileSeparator + serviceName + ".txt", ServiceGenerator.class, null, null);
     } catch (Exception ex) {
       LoggingRuntime.logMsgView(Level.ERROR, "IO-Error when writing Protocol File ", ServiceGenerator.class, ex, null);
     }
@@ -414,10 +398,16 @@ public class ServiceGenerator {
       this.protocolFileDirectory = this.getValueFrom(lines, 0);
       // Line 2: eclipseProjectDirectory = (e.g.) C:/D/JavaWorkspace/MDEGen 
       this.javaIDEProjectDirectory = this.getValueFrom(lines, 1);
-      // Line 3-5: databaseConnectionData: URL, User, Password  
-      this.dbConnectionData = new DBConnectionData(this.getValueFrom(lines, 2), this.getValueFrom(lines, 3), this.getValueFrom(lines, 4));
+      // Line 3: Database use (Yes/No) - Default "No" is only overridden if value == "Yes" 
+      if (this.getValueFrom(lines, 2).equals("Yes")) {
+        PersistenceExecuterFactory.setUseDataBase();
+      } else {
+        PersistenceExecuterFactory.setUseNoDataBase();
+      }
+      // Line 4-6: databaseConnectionData: URL, User, Password  
+      this.dbConnectionData = new DBConnectionData(this.getValueFrom(lines, 3), this.getValueFrom(lines, 4), this.getValueFrom(lines, 5));
     } catch (Exception e) {
-      this.informationMessage("Could not find the Configuration File or could not read its Contents. Tried at " + this.mpsProjectPath + ". Using C:/Temp for Protocols and Default Data for mySQL Database at jdbc:mysql://localhost:3306 instead.");
+      this.informationMessage("Could not find the Configuration File or could not read its Contents. Tried at " + this.mpsProjectPath + ". Using C:/Temp for Protocols and Default Data for mySQL Database at jdbc:mysql://localhost:3306 instead");
       this.protocolFileDirectory = "C:" + this.fileSeparator + "Temp";
       this.javaIDEProjectDirectory = "C:" + this.fileSeparator + "Temp";
       this.dbConnectionData = new DBConnectionData("jdbc:mysql://localhost:3306", "root", "");
@@ -426,16 +416,16 @@ public class ServiceGenerator {
   private String getValueFrom(List<String> lines, Integer index) {
     return lines.get(index).split("=")[1].trim();
   }
-  private void dropDatabase(String databaseName) throws Exception {
-    DBConnectionManager.getTheInstance().openDBConnection(this.dbConnectionData);
-    Connection conn = DBConnectionManager.getTheInstance().get();
-    if (this.databaseExists(databaseName, conn)) {
-      DBConnectionManager.getTheInstance().get().createStatement().executeUpdate("DROP DATABASE " + databaseName);
+  private void dropDatabase(String databaseName) {
+    try {
+      PersistenceExecuterFactory.getConfiguredFactory().getDBDDLExecuter().dropDatabase(this.enhanceWithDatabaseName(databaseName));
+    } catch (Exception e) {
+      LoggingRuntime.logMsgView(Level.ERROR, this.errorOnInitialisingDB, ServiceGenerator.class, e, null);
     }
-    DBConnectionManager.getTheInstance().close();
   }
-  private boolean databaseExists(String databaseName, Connection conn) throws SQLException {
-    return conn.createStatement().executeQuery("SHOW DATABASES LIKE '" + databaseName + "'").next();
+  private DBConnectionData enhanceWithDatabaseName(String databaseName) {
+    DBConnectionData root = this.dbConnectionData;
+    return new DBConnectionData(root.getUrl(), databaseName, root.getUser(), root.getPassword());
   }
   private boolean deleteDirectory(File d) {
     if (!(d.exists())) {
@@ -447,40 +437,6 @@ public class ServiceGenerator {
     }
     return d.delete();
   }
-
-  private void streamTest() {
-    // Temporary only for testing, same for next method 
-    File f = new File("C:/Temp/hope.txt");
-    try {
-      XStream y = new XStream();
-      JService js = ((JService) y.fromXML(f));
-      JOptionPane.showMessageDialog(null, "Successfully retrieved object from XML: " + js.getName());
-    } catch (Exception e) {
-      JOptionPane.showMessageDialog(null, "Exception When reading from XML: " + e.getMessage());
-    }
-  }
-  private void streamTestComplete() {
-    File f = new File("C:/Temp/hope.txt");
-    XStream x = new XStream();
-    String xmlContents = x.toXML(this.jService);
-    FileCreator fc = new FileCreator();
-    fc.append(xmlContents);
-    try {
-      fc.createFile(f);
-      JOptionPane.showMessageDialog(null, "Successfully Created XML File: ");
-    } catch (Exception e) {
-      JOptionPane.showMessageDialog(null, "Exception when creating XML File: " + e.getMessage());
-    }
-    try {
-      XStream y = new XStream();
-      JService js = ((JService) y.fromXML(f));
-      JOptionPane.showMessageDialog(null, "Successfully retrieved object from XML: " + js.getName());
-    } catch (Exception e) {
-      JOptionPane.showMessageDialog(null, "Exception when reading from XML: " + e.getMessage());
-    }
-
-  }
-
 
   private static final class PROPS {
     /*package*/ static final SProperty name$tAp1 = MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name");

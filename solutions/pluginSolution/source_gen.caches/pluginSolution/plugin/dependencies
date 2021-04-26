@@ -105,9 +105,8 @@
     <classNode extendsClassName="jetbrains.mps.workbench.action.BaseAction" />
   </dependency>
   <dependency className="pluginSolution.plugin.ServiceGenerator">
-    <classNode dependClassName="com.thoughtworks.xstream.XStream" />
     <classNode dependClassName="db.connection.DBConnectionData" />
-    <classNode dependClassName="db.connection.DBConnectionManager" />
+    <classNode dependClassName="db.executer.PersistenceExecuterFactory" />
     <classNode dependClassName="java.io.File" />
     <classNode dependClassName="java.io.IOException" />
     <classNode dependClassName="java.lang.Class" />
@@ -121,14 +120,11 @@
     <classNode dependClassName="java.lang.reflect.Constructor" />
     <classNode dependClassName="java.lang.reflect.Method" />
     <classNode dependClassName="java.lang.reflect.Parameter" />
-    <classNode dependClassName="java.sql.Connection" />
-    <classNode dependClassName="java.sql.SQLException" />
     <classNode dependClassName="java.util.ArrayList" />
     <classNode dependClassName="java.util.Date" />
     <classNode dependClassName="java.util.List" />
     <classNode dependClassName="javaASTTraversals.codeGeneration.JavaGenerator" />
     <classNode dependClassName="javaASTTraversals.referenceCompletion.ReferenceCompletionVisitor" />
-    <classNode dependClassName="javax.swing.JOptionPane" />
     <classNode dependClassName="jetbrains.mps.baseLanguage.logging.runtime.model.LoggingRuntime" />
     <classNode dependClassName="jetbrains.mps.internal.collections.runtime.CollectionSequence" />
     <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />

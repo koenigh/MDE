@@ -1,5 +1,6 @@
 protocolFileDirectory = C:\D\JavaWorkspace\MDEGen\protocols
-javaIDEProjectDirectory = C:/D/JavaWorkspace/MDEGen
+javaIDEProjectDirectory = C:\D\JavaWorkspace\MDEGen
+database(Yes/No) = Yes  
 databaseURL = jdbc:mysql://localhost:3306
 databaseUser = root
 databasePassword = 
