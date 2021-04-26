@@ -84,7 +84,6 @@
     <classNode dependClassName="pluginSolution.plugin.MacOSX105_KeymapChanges" />
     <classNode dependClassName="pluginSolution.plugin.MacOSX_KeymapChanges" />
     <classNode dependClassName="pluginSolution.plugin.ReInitializeService_Action" />
-    <classNode dependClassName="pluginSolution.plugin.keyMapReinitialise_KeymapChanges" />
     <classNode dependClassName="pluginSolution.plugin.keyMapRunGeneration_KeymapChanges" />
     <classNode extendsClassName="jetbrains.mps.plugins.applicationplugins.BaseApplicationPlugin" />
   </dependency>
@@ -156,13 +155,6 @@
     <classNode dependClassName="utilities.FileReader" />
     <classNode dependClassName="utilities.JServiceXMLReader" />
     <classNode dependClassName="utilities.JServiceXMLWriter" />
-  </dependency>
-  <dependency className="pluginSolution.plugin.keyMapReinitialise_KeymapChanges">
-    <classNode dependClassName="com.intellij.openapi.actionSystem.KeyboardShortcut" />
-    <classNode dependClassName="com.intellij.openapi.actionSystem.Shortcut" />
-    <classNode dependClassName="java.lang.String" />
-    <classNode dependClassName="javax.swing.KeyStroke" />
-    <classNode extendsClassName="jetbrains.mps.plugins.actions.BaseKeymapChanges" />
   </dependency>
   <dependency className="pluginSolution.plugin.keyMapRunGeneration_KeymapChanges">
     <classNode dependClassName="com.intellij.openapi.actionSystem.KeyboardShortcut" />

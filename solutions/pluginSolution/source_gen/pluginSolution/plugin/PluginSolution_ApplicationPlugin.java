@@ -37,7 +37,6 @@ public class PluginSolution_ApplicationPlugin extends BaseApplicationPlugin {
     List<BaseKeymapChanges> res = ListSequence.fromList(new ArrayList<BaseKeymapChanges>());
     ListSequence.fromList(res).addElement(new MacOSX105_KeymapChanges());
     ListSequence.fromList(res).addElement(new MacOSX_KeymapChanges());
-    ListSequence.fromList(res).addElement(new keyMapReinitialise_KeymapChanges());
     ListSequence.fromList(res).addElement(new keyMapRunGeneration_KeymapChanges());
     return res;
   }

@@ -26,25 +26,25 @@
       <node id="1342586541813486048" at="25,30,26,30" concept="11" />
       <node id="1342586541813486048" at="29,48,30,14" concept="11" />
       <node id="1342586541813486048" at="36,48,37,92" concept="9" />
-      <node id="1342586541813486048" at="41,83,42,15" concept="10" />
+      <node id="1342586541813486048" at="40,83,41,15" concept="10" />
       <node id="1342586541813486048" at="17,0,19,0" concept="1" trace="PluginSolution_ApplicationPlugin#()V" />
       <node id="1342586541813486048" at="33,0,36,0" concept="8" trace="adjustRegularGroups#()V" />
       <node id="1342586541813486048" at="20,0,24,0" concept="8" trace="getId#()Lcom/intellij/openapi/extensions/PluginId;" />
+      <node id="1342586541813486048" at="36,0,43,0" concept="8" trace="initKeymaps#()Ljava/util/List;" />
       <node id="1342586541813486048" at="25,0,33,0" concept="8" trace="createGroups#()V" />
-      <node id="1342586541813486048" at="36,0,44,0" concept="8" trace="initKeymaps#()Ljava/util/List;" />
       <scope id="1342586541813486048" at="17,45,17,45" />
       <scope id="1342586541813486048" at="21,27,22,16" />
       <scope id="1342586541813486048" at="33,37,34,78" />
       <scope id="1342586541813486048" at="17,0,19,0" />
       <scope id="1342586541813486048" at="33,0,36,0" />
       <scope id="1342586541813486048" at="20,0,24,0" />
-      <scope id="1342586541813486048" at="25,30,31,43" />
-      <scope id="1342586541813486048" at="36,48,42,15">
+      <scope id="1342586541813486048" at="36,48,41,15">
         <var name="res" id="1342586541813486048" />
       </scope>
+      <scope id="1342586541813486048" at="25,30,31,43" />
+      <scope id="1342586541813486048" at="36,0,43,0" />
       <scope id="1342586541813486048" at="25,0,33,0" />
-      <scope id="1342586541813486048" at="36,0,44,0" />
-      <unit id="1342586541813486048" at="14,0,45,0" name="pluginSolution.plugin.PluginSolution_ApplicationPlugin" />
+      <unit id="1342586541813486048" at="14,0,44,0" name="pluginSolution.plugin.PluginSolution_ApplicationPlugin" />
     </file>
   </root>
   <root nodeRef="r:13473953-d1c1-421b-a99e-db15a19d5654(pluginSolution.plugin)/1342586541813486055">
@@ -122,7 +122,7 @@
   </root>
   <root nodeRef="r:13473953-d1c1-421b-a99e-db15a19d5654(pluginSolution.plugin)/1342586541813833311">
     <file name="PluginSolution_ApplicationPlugin.java">
-      <node id="1342586541813833311" at="40,82,41,83" concept="3" />
+      <node id="1342586541813833311" at="39,70,40,83" concept="3" />
     </file>
     <file name="keyMapRunGeneration_KeymapChanges.java">
       <node id="1342586541813833311" at="11,46,12,14" concept="11" />
@@ -1008,31 +1008,6 @@
       </scope>
       <unit id="871241461087997791" at="50,0,53,0" name="pluginSolution.plugin.ReInitializeService_Action$CONCEPTS" />
       <unit id="871241461087997791" at="16,0,54,0" name="pluginSolution.plugin.ReInitializeService_Action" />
-    </file>
-  </root>
-  <root nodeRef="r:13473953-d1c1-421b-a99e-db15a19d5654(pluginSolution.plugin)/871241461089675496">
-    <file name="PluginSolution_ApplicationPlugin.java">
-      <node id="871241461089675496" at="39,70,40,82" concept="3" />
-    </file>
-    <file name="keyMapReinitialise_KeymapChanges.java">
-      <node id="871241461089675496" at="11,45,12,14" concept="11" />
-      <node id="871241461089675497" at="12,14,13,96" concept="3" />
-      <node id="871241461089675496" at="13,96,14,28" concept="11" />
-      <node id="871241461089675496" at="14,28,15,15" concept="11" />
-      <node id="871241461089675496" at="17,29,18,22" concept="10" />
-      <node id="871241461089675496" at="20,53,21,70" concept="10" />
-      <node id="871241461089675496" at="17,0,20,0" concept="8" trace="getScheme#()Ljava/lang/String;" />
-      <node id="871241461089675496" at="20,0,23,0" concept="14" trace="getShortcut#(Ljava/lang/String;)Lcom/intellij/openapi/actionSystem/Shortcut;" />
-      <node id="871241461089675496" at="11,0,17,0" concept="1" trace="keyMapReinitialise_KeymapChanges#()V" />
-      <scope id="871241461089675496" at="17,29,18,22" />
-      <scope id="871241461089675496" at="20,53,21,70" />
-      <scope id="871241461089675496" at="17,0,20,0" />
-      <scope id="871241461089675496" at="20,0,23,0">
-        <var name="stroke" id="871241461089675496" />
-      </scope>
-      <scope id="871241461089675496" at="11,45,15,15" />
-      <scope id="871241461089675496" at="11,0,17,0" />
-      <unit id="871241461089675496" at="10,0,24,0" name="pluginSolution.plugin.keyMapReinitialise_KeymapChanges" />
     </file>
   </root>
 </debug-info>

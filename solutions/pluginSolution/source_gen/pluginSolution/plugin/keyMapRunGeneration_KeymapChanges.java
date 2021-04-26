@@ -10,7 +10,7 @@ import javax.swing.KeyStroke;
 public class keyMapRunGeneration_KeymapChanges extends BaseKeymapChanges {
   public keyMapRunGeneration_KeymapChanges() {
     // simple 
-    addSimpleShortcut("pluginSolution.plugin.GenerateService_Action", getShortcut("alt G"));
+    addSimpleShortcut("pluginSolution.plugin.GenerateService_Action", getShortcut("alt C"));
     // simple parameterized 
     // complex 
   }

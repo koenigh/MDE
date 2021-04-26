@@ -454,7 +454,7 @@
       <ref role="1bYAoF" node="1axOPyL0P7B" resolve="GenerateService" />
       <node concept="pLAjd" id="1axOPyL29Tx" role="Zd501">
         <property role="pLAjc" value="alt" />
-        <property role="pLAjf" value="VK_G" />
+        <property role="pLAjf" value="VK_C" />
       </node>
     </node>
   </node>
@@ -7875,16 +7875,6 @@
       <node concept="1oajcY" id="KnhnSDJQpt" role="1oa70y" />
       <node concept="3Tqbb2" id="KnhnSDJQ7b" role="1tU5fm">
         <ref role="ehGHo" to="scpa:3lviAJgVTHh" resolve="Service" />
-      </node>
-    </node>
-  </node>
-  <node concept="Zd50a" id="KnhnSDPUzC">
-    <property role="TrG5h" value="keyMapReinitialise" />
-    <node concept="Zd509" id="KnhnSDPUzD" role="Zd508">
-      <ref role="1bYAoF" node="KnhnSDJwXv" resolve="ReInitializeService" />
-      <node concept="pLAjd" id="KnhnSDPUzE" role="Zd501">
-        <property role="pLAjc" value="alt" />
-        <property role="pLAjf" value="VK_C" />
       </node>
     </node>
   </node>
