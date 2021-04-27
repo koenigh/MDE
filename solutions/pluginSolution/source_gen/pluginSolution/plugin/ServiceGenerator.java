@@ -80,7 +80,7 @@ public class ServiceGenerator {
       }
       this.informationMessage("Java AST Creation was Aborted @ " + new Date().toString() + ". " + message);
       this.writeProtocol(BaseConcept__BehaviorDescriptor.getPresentation_idhEwIMiw.invoke(this.node));
-      LoggingRuntime.logMsgView(Level.INFO, message + ". See also protocol file in " + this.protocolFileDirectory + this.fileSeparator + BaseConcept__BehaviorDescriptor.getPresentation_idhEwIMiw.invoke(this.node) + ".txt", ServiceGenerator.class, null, null);
+      LoggingRuntime.logMsgView(Level.ERROR, message + ". See also protocol file in " + this.protocolFileDirectory + this.fileSeparator + BaseConcept__BehaviorDescriptor.getPresentation_idhEwIMiw.invoke(this.node) + ".txt", ServiceGenerator.class, null, null);
       return null;
     }
     this.dropDatabase(SPropertyOperations.getString(this.node, PROPS.name$tAp1));
@@ -383,6 +383,7 @@ public class ServiceGenerator {
   }
   private void error(String s) {
     this.fileCreator.append("       ---->Error: " + s);
+    LoggingRuntime.logMsgView(Level.ERROR, s, ServiceGenerator.class, null, null);
   }
   private String getPrefixForJavaClass() {
     return "metaModel.J";
