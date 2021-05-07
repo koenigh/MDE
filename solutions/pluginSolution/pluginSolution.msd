@@ -5,14 +5,6 @@
       <sourceRoot location="." />
     </modelRoot>
   </models>
-  <stubModelEntries>
-    <stubModelEntry path="C:/Users/König/MPPSProjects/MDSD/solutions/external/libs/mde.jar" />
-    <stubModelEntry path="C:/Users/König/MPPSProjects/MDSD/solutions/external/libs/mysql-connector-java-8.0.22.jar" />
-    <stubModelEntry path="C:/Users/König/MPPSProjects/MDSD/solutions/external/libs/picocog-1.0.2.jar" />
-    <stubModelEntry path="C:/Users/König/MPPSProjects/MDSD/solutions/external/libs/xmlpull-1.1.3.1.jar" />
-    <stubModelEntry path="C:/Users/König/MPPSProjects/MDSD/solutions/external/libs/xpp3_min-1.1.4c.jar" />
-    <stubModelEntry path="C:/Users/König/MPPSProjects/MDSD/solutions/external/libs/xstream-1.4.12.jar" />
-  </stubModelEntries>
   <sourcePath />
   <dependencies>
     <dependency reexport="false">6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)</dependency>
